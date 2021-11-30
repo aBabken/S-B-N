@@ -1,0 +1,32 @@
+.header {
+    padding: 22px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    a {
+        display: block;
+        &.sink {
+            z-index: -1;
+        }
+    }
+}
+.header-logo {
+    &.white {
+        svg {
+            path {
+                fill: $white;
+            }
+        }
+    }
+}
+.header-menu {
+    &.white {
+        color: $white;
+    }
+}

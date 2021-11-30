@@ -1,0 +1,354 @@
+/* --------------------------------------------------------
+version: 1.0
+author: Asryan Babken
+email: ababken10@gamail.com
+website: https://freelancehunt.com/freelancer/ababken.html
+----------------------------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+li::marker {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a,
+button,
+textarea,
+input {
+  outline: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+.no-boot ul {
+  list-style: none;
+  margin: 0;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.xl-container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.lg-container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 47px;
+}
+
+body {
+  font-size: 25px;
+}
+
+.header {
+  padding: 22px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-wrapper a {
+  display: block;
+}
+
+.header-wrapper a.sink {
+  z-index: -1;
+}
+
+.header-logo.white svg path {
+  fill: #FFFFFF;
+}
+
+.header-menu.white {
+  color: #FFFFFF;
+}
+
+.screen-section {
+  max-height: 100vh;
+  min-height: none;
+  overflow: visible;
+}
+
+.screen-section figure {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+
+.screen-section figure video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.main__screen--title {
+  position: absolute;
+  -webkit-transition: all .6s ease-out;
+  transition: all .6s ease-out;
+  z-index: 10;
+  text-align: end;
+  top: 10vh;
+  right: 50%;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.video-animation.grow {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  height: auto;
+  max-height: none;
+  min-height: 100vh;
+}
+
+.main__screen--title {
+  font-size: 30px;
+}
+
+.video-borders {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-borders div {
+  background: #FFFFFF;
+  display: block;
+  position: absolute;
+  -webkit-transition: width .6s ease-out, height .6s ease-out, -webkit-transform .5s ease-out;
+  transition: width .6s ease-out, height .6s ease-out, -webkit-transform .5s ease-out;
+  transition: width .6s ease-out, height .6s ease-out, transform .5s ease-out;
+  transition: width .6s ease-out, height .6s ease-out, transform .5s ease-out, -webkit-transform .5s ease-out;
+}
+
+.animation-done .video-border-top,
+.animation-done .video-border-bottom {
+  height: 0;
+}
+
+.animation-done .video-border-right,
+.animation-done .video-border-left {
+  width: 0;
+}
+
+.video-border-top {
+  top: 0;
+  left: 0;
+  height: 20.2vh;
+  width: 100%;
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+}
+
+.video-border-bottom {
+  bottom: 0;
+  left: 0;
+  height: 10.3vh;
+  width: 100%;
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+}
+
+.video-border-right {
+  width: 15.11vh;
+  height: 100%;
+  right: 0;
+  top: 0;
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+}
+
+.video-border-left {
+  width: 15.11vh;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+.default-block {
+  position: relative;
+  opacity: 0;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  z-index: 10;
+  width: 100%;
+  max-width: 1760px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+  height: 120vh;
+  margin-top: -90vh;
+}
+/*# sourceMappingURL=style.css.map */
