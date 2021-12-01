@@ -441,6 +441,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 550px) {
+  .video-border-right {
+    height: 5.8vw;
+  }
+}
+
 .video-border-left {
   width: 9.11vw;
   height: 100%;
@@ -453,6 +459,12 @@ body {
 @media only screen and (max-width: 1200px) {
   .video-border-left {
     width: 9.8vw;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .video-border-left {
+    height: 5.8vw;
   }
 }
 

@@ -119,6 +119,9 @@
     @include lg {
         width: 9.8vw;
     }
+    @include sm {
+        height: 5.8vw;
+    }
 }
 .video-border-left {
     width: 9.11vw;
@@ -128,6 +131,9 @@
     transform-origin: left center;
     @include lg {
         width: 9.8vw;
+    }
+    @include sm {
+        height: 5.8vw;
     }
 }
 .default-block {
