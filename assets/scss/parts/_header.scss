@@ -5,6 +5,12 @@
     left: 0;
     width: 100%;
     z-index: 100;
+    @include lg {
+        padding: 19px 0;
+    }
+    @include sm {
+        padding: 17px 0;
+    }
 }
 .header-wrapper {
     display: flex;
@@ -12,7 +18,25 @@
     a {
         display: block;
         &.sink {
-            z-index: -1;
+            &* {
+                z-index: -1;                
+            }
+        }
+    }
+    .header-logo {
+        svg {            
+            @include lg {
+                width: 60px;
+                height: auto;
+            }
+        }
+    }
+    .menu {           
+        @include lg {
+            @include rhythm(18,28);
+        }
+        @include sm {
+            @include rhythm(16,26);
         }
     }
 }

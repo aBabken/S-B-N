@@ -1,0 +1,48 @@
+// breakpoints
+
+
+
+@mixin lg {
+    @media only screen and (max-width: 1200px) {
+        @content;
+    }
+ }
+
+
+
+
+ @mixin sm {
+    @media only screen and (max-width: 550px) {
+        @content;
+    }
+ }
+
+
+
+
+ @mixin lg-h {
+    @media only screen and (min-height: 1200px) {
+        @content;
+    }
+ }
+
+
+
+
+
+//  
+
+@mixin font-size($sizeValue){
+    font-size: $sizeValue + px;
+    font-size: (0.0625 * $sizeValue) + rem;
+}
+
+@mixin line-height($heightValue){
+    line-height: $heightValue + px;
+    line-height: (0.0625 * $heightValue) + rem;
+}
+
+@mixin rhythm($sizeValue, $heightValue) {
+    @include font-size($sizeValue);
+    @include line-height($heightValue);
+}

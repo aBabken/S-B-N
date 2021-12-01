@@ -186,6 +186,10 @@ input[type=number] {
 
 body {
   font-size: 25px;
+  font-size: 1.5625rem;
+  line-height: 35px;
+  line-height: 2.1875rem;
+  background: #FFFFFF;
 }
 
 .header {
@@ -195,6 +199,18 @@ body {
   left: 0;
   width: 100%;
   z-index: 100;
+}
+
+@media only screen and (max-width: 1200px) {
+  .header {
+    padding: 19px 0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .header {
+    padding: 17px 0;
+  }
 }
 
 .header-wrapper {
@@ -210,8 +226,33 @@ body {
   display: block;
 }
 
-.header-wrapper a.sink {
+.header-wrapper a.sink* {
   z-index: -1;
+}
+
+@media only screen and (max-width: 1200px) {
+  .header-wrapper .header-logo svg {
+    width: 60px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .header-wrapper .menu {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 28px;
+    line-height: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .header-wrapper .menu {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 26px;
+    line-height: 1.625rem;
+  }
 }
 
 .header-logo.white svg path {
@@ -234,7 +275,7 @@ body {
   top: 0;
   height: 100vh;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .screen-section figure video {
@@ -244,19 +285,70 @@ body {
   height: 100%;
 }
 
-.main__screen--title {
+.text-block {
   position: absolute;
-  -webkit-transition: all .6s ease-out;
-  transition: all .6s ease-out;
+  -webkit-transition: -webkit-transform .6s ease-out;
+  transition: -webkit-transform .6s ease-out;
+  transition: transform .6s ease-out;
+  transition: transform .6s ease-out, -webkit-transform .6s ease-out;
   z-index: 10;
-  text-align: end;
-  top: 10vh;
+  top: calc(100% - 91.8vh);
   right: 50%;
+  padding-right: 4vw;
   -webkit-transform: translate(50%, 0);
           transform: translate(50%, 0);
-  max-width: 1920px;
+  max-width: calc(100% - 18.22vw);
   width: 100%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media only screen and (max-width: 1200px) {
+  .text-block {
+    top: calc(100% - 85.8vh);
+    padding-right: 8vw;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .text-block {
+    top: calc(100% - 92.8vh);
+  }
+}
+
+@media only screen and (min-height: 1200px) {
+  .text-block {
+    top: calc(100% - 85.8vh);
+  }
+}
+
+.main__screen--title {
+  text-align: start;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .main__screen--title {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 20px;
+    line-height: 1.25rem;
+    max-width: 404px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .main__screen--title {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 18px;
+    line-height: 1.125rem;
+  }
 }
 
 .video-animation.grow {
@@ -269,8 +361,10 @@ body {
   min-height: 100vh;
 }
 
-.main__screen--title {
-  font-size: 30px;
+@media only screen and (max-width: 1200px) {
+  .video-animation {
+    padding-top: 5.5vh;
+  }
 }
 
 .video-borders {
@@ -279,6 +373,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 .video-borders div {
@@ -304,10 +399,16 @@ body {
 .video-border-top {
   top: 0;
   left: 0;
-  height: 20.2vh;
+  height: 22.2vh;
   width: 100%;
   -webkit-transform-origin: center top;
           transform-origin: center top;
+}
+
+@media only screen and (max-width: 550px) {
+  .video-border-top {
+    height: 15vh;
+  }
 }
 
 .video-border-bottom {
@@ -319,8 +420,14 @@ body {
           transform-origin: center bottom;
 }
 
+@media only screen and (max-width: 1200px) {
+  .video-border-bottom {
+    height: 5.5vh;
+  }
+}
+
 .video-border-right {
-  width: 15.11vh;
+  width: 9.11vw;
   height: 100%;
   right: 0;
   top: 0;
@@ -328,13 +435,25 @@ body {
           transform-origin: right center;
 }
 
+@media only screen and (max-width: 1200px) {
+  .video-border-right {
+    width: 9.8vw;
+  }
+}
+
 .video-border-left {
-  width: 15.11vh;
+  width: 9.11vw;
   height: 100%;
   left: 0;
   top: 0;
   -webkit-transform-origin: left center;
           transform-origin: left center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .video-border-left {
+    width: 9.8vw;
+  }
 }
 
 .default-block {
@@ -348,7 +467,7 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   left: 50%;
-  height: 120vh;
+  height: 115vh;
   margin-top: -90vh;
 }
 /*# sourceMappingURL=style.css.map */

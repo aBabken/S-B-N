@@ -7,7 +7,7 @@
         top: 0;
         height: 100vh;
         width: 100%;
-        z-index: 1;
+        z-index: 2;
         video {
             object-fit: cover;
             width: 100%;
@@ -15,17 +15,40 @@
         }
     }
 }
-.main__screen--title {
+.text-block {
     position: absolute;
-    transition: all .6s ease-out;
+    transition: transform .6s ease-out;
     z-index: 10;
-    text-align: end;
-    top: 10vh;
+    top: calc(100% - 91.8vh);
     right: 50%;
+    padding-right: 4vw;
     transform: translate(50%, 0);
-    max-width: 1920px;
+    max-width: calc(100% - 18.22vw);
     width: 100%;
     margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    @include lg {
+        top: calc(100% - 85.8vh);
+        padding-right: 8vw;
+    }
+    @include sm {
+        top: calc(100% - 92.8vh);
+    }
+    @include lg-h {
+        top: calc(100% - 85.8vh);
+    }
+}
+.main__screen--title {
+    text-align: start;
+    font-size: 30px;
+    @include lg {
+        @include rhythm(16,20);
+        max-width: 404px;
+    }
+    @include sm {
+        @include rhythm(14,18);
+    }
 }
 .video-animation {
     &.grow {
@@ -37,10 +60,11 @@
         max-height: none;
         min-height: 100vh;
     }
+    @include lg {
+        padding-top: 5.5vh;
+    }
 }
-.main__screen--title {
-    font-size: 30px;
-}
+
 
 .video-borders {
     position: absolute;
@@ -48,6 +72,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 1;
     div {
         background: $white;
         display: block;
@@ -68,9 +93,12 @@
 .video-border-top {
     top: 0;
     left: 0;
-    height: 20.2vh;
+    height: 22.2vh;
     width: 100%;
     transform-origin: center top;
+    @include sm {
+        height: 15vh;
+    }
 }
 .video-border-bottom {
     bottom: 0;
@@ -78,20 +106,29 @@
     height: 10.3vh;
     width: 100%;
     transform-origin: center bottom;
+    @include lg {
+        height: 5.5vh;
+    }
 }
 .video-border-right {
-    width: 15.11vh;
+    width: 9.11vw;
     height: 100%;
     right: 0;
     top: 0;
     transform-origin: right center;
+    @include lg {
+        width: 9.8vw;
+    }
 }
 .video-border-left {
-    width: 15.11vh;
+    width: 9.11vw;
     height: 100%;
     left: 0;
     top: 0;
     transform-origin: left center;
+    @include lg {
+        width: 9.8vw;
+    }
 }
 .default-block {
     position: relative;
@@ -102,6 +139,6 @@
     max-width: 1760px;
     transform: translateX(-50%);
     left: 50%;
-    height: 120vh;
+    height: 115vh;
     margin-top: -90vh;
 }

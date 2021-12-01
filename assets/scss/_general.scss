@@ -182,5 +182,6 @@ input[type=number] {
 }
 
 body {
-    font-size: 25px;
+    @include rhythm(25, 35);
+    background: $white;
 }
