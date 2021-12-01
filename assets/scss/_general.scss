@@ -147,6 +147,8 @@ q:after {
 }
 html {
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 table {
     border-collapse: collapse;
@@ -184,4 +186,16 @@ input[type=number] {
 body {
     @include rhythm(25, 35);
     background: $white;
+    color: $black;
+    font-family: sans-serif;
+}
+.scroll-btn {
+    color: $white;
+    position: fixed;
+    bottom: 38px;
+    left: 38px;
+    z-index: 10;
+    display: none;
+    @include rhythm(70, 64);
+
 }

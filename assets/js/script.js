@@ -19,6 +19,39 @@ $(document).ready(function () {
 
 
 
+  $('.screen-section').each(function() {
+    var target = $(this);
+
+
+    $(window).scroll(function() {
+      var scrollTop = $(window).scrollTop();
+      var elOffTop = $('.screen-section').offset().top;
+      var offset = target[0].getBoundingClientRect().top - target[0].offsetParent.getBoundingClientRect().top;
+      const top = window.pageYOffset + window.innerHeight - offset;
+      // console.log($('.scroll-item')[0].getBoundingClientRect())
+    })
+  })
+
+  var defaultOptions = {
+    container: document.body,
+    panelSelector: '.screen-section',
+    directionThreshold: 1,
+    delay: 0,
+    duration: 500,
+    easing: 'ease'
+  };
+
+  let panel = new PanelSnap(defaultOptions);
+  $('.scroll-btn').click(function() {
+    let next = $(panel.activePanel).data('i') + 1;
+    let pane = panel.panelList.find(el=> {
+      return $(el).data('i') == next
+    })
+    let p = pane
+    console.log(p)
+    panel.snapToPanel(p)
+  })
+
   $(".video-animation").each(function () {
     var caseTriggered = false;
     var animationFinished = false;
@@ -111,7 +144,7 @@ $(document).ready(function () {
     let element_from_point = elementsFromPoint(x, y).find((el) => {
       return $(el).data("l");
     });
-    console.log(element_from_point);
+    // console.log(element_from_point);
     header.removeClass("sink");
 
     if (element_from_point) {

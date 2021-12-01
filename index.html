@@ -32,7 +32,7 @@
     </header>
 
     <main class="main">
-        <div class="section main-section screen-section video-animation">
+        <div class="section main-section screen-section video-animation" data-i="1">
             <a href="#">
                 <figure>
                     <div class="text-block">
@@ -55,12 +55,22 @@
                 </div>
             </a>
         </div>
+        <div class="section screen-section sas" style="height: 100vh;" data-i="2">
+
+            <div class="scroll-item"></div>
+        </div>
     </main>
 
 
+    <a class="scroll-btn">
+        <span>Arbeid</span>
+    </a>
+
 </div>
 
-<div style="display: flex;justify-content: space-between;margin-top: 100px;">
+
+
+<div style="display: flex;justify-content: space-between;margin-top: 100px;"  data-snap-point>
 
     <div style="display: flex;flex-direction: column;gap: 100px;max-width: 100px;">
         <img src="https://picsum.photos/200/300" data-l="1"  alt="">
@@ -93,8 +103,10 @@
         <img src="https://picsum.photos/200/500" data-l="1" alt="">    
     </div>
 
-
 <script src="assets/js/libs/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="assets/js/libs/snap-scroll.min.js"></script>
+<script src="assets/js/libs/panelsnap.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
