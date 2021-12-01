@@ -190,12 +190,14 @@ body {
     font-family: sans-serif;
 }
 .scroll-btn {
-    color: $white;
+    color: $black;
     position: fixed;
     bottom: 38px;
     left: 38px;
     z-index: 10;
     // display: none;
     @include rhythm(70, 64);
-
+    &.white {
+        color: $white;
+    }
 }

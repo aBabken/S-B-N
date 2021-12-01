@@ -39,6 +39,9 @@
     @include lg-h {
         top: calc(100% - 85.8vh);
     }
+    @media (max-width: 550px) and (max-height: 550px) {
+        display: none;
+    }
 }
 .main__screen--title {
     text-align: start;
@@ -48,7 +51,7 @@
         max-width: 404px;
     }
     @include sm {
-        @include rhythm(14,18);
+        @include rhythm(12,16);
     }
 }
 .video-animation {
