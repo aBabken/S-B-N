@@ -19,7 +19,7 @@
     position: absolute;
     transition: transform .6s ease-out;
     z-index: 10;
-    top: calc(100% - 91.8vh);
+    top: calc(100% - 90vh);
     right: 50%;
     padding-right: 4vw;
     transform: translate(50%, 0);
@@ -33,7 +33,7 @@
         padding-right: 8vw;
     }
     @include sm {
-        top: calc(100% - 92.8vh);
+        top: calc(100% - 90.8vh);
     }
     @include lg-h {
         top: calc(100% - 85.8vh);
@@ -63,6 +63,9 @@
     @include lg {
         padding-top: 5.5vh;
     }
+    @include sm {
+        padding-top: 0;
+    }
 }
 
 
@@ -88,7 +91,12 @@
     .video-border-right,
     .video-border-left {
         width: 0;
-    }   
+    }  
+    .main__screen--title {
+        opacity: 0;
+        transition: opacity .3s ease-out;
+        transition-delay: .3s;
+    } 
 }
 .video-border-top {
     top: 0;
@@ -108,6 +116,9 @@
     transform-origin: center bottom;
     @include lg {
         height: 5.5vh;
+    }
+    @include sm {
+        height: 0;
     }
 }
 .video-border-right {
@@ -147,4 +158,7 @@
     left: 50%;
     height: 115vh;
     margin-top: -90vh;
+    @include sm {
+        height: 125vh;
+    }
 }

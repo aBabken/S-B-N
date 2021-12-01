@@ -292,7 +292,7 @@ body {
   transition: transform .6s ease-out;
   transition: transform .6s ease-out, -webkit-transform .6s ease-out;
   z-index: 10;
-  top: calc(100% - 91.8vh);
+  top: calc(100% - 90vh);
   right: 50%;
   padding-right: 4vw;
   -webkit-transform: translate(50%, 0);
@@ -317,7 +317,7 @@ body {
 
 @media only screen and (max-width: 550px) {
   .text-block {
-    top: calc(100% - 92.8vh);
+    top: calc(100% - 90.8vh);
   }
 }
 
@@ -367,6 +367,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 550px) {
+  .video-animation {
+    padding-top: 0;
+  }
+}
+
 .video-borders {
   position: absolute;
   top: 0;
@@ -396,6 +402,14 @@ body {
   width: 0;
 }
 
+.animation-done .main__screen--title {
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-out;
+  transition: opacity .3s ease-out;
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
 .video-border-top {
   top: 0;
   left: 0;
@@ -423,6 +437,12 @@ body {
 @media only screen and (max-width: 1200px) {
   .video-border-bottom {
     height: 5.5vh;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .video-border-bottom {
+    height: 0;
   }
 }
 
@@ -481,5 +501,11 @@ body {
   left: 50%;
   height: 115vh;
   margin-top: -90vh;
+}
+
+@media only screen and (max-width: 550px) {
+  .default-block {
+    height: 125vh;
+  }
 }
 /*# sourceMappingURL=style.css.map */

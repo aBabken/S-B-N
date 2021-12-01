@@ -89,7 +89,7 @@ $(document).ready(function () {
           .css({ transform: "scale(" + percentageAnimNeg + ", 1)" });
 
         let _scrollResponsibleTop = mediaChecker('max', 1200) ? scrollTop * 1.5 : scrollTop;
-        $(text).css({ transform: `translate(50%, -${_scrollResponsibleTop || 0}px)` });
+        $(text).css({ transform: `translate(50%, -${_scrollResponsibleTop || 0}px)`});
       }
     });
   });
@@ -101,7 +101,6 @@ $(document).ready(function () {
   function mediaActions() {
     windowWidth = parseInt($(window).width());
     borderWidth = parseInt($(".video-border-right").width());
-    console.log(windowWidth - borderWidth)
     // text.css({ "max-width": `${windowWidth - (borderWidth * 2)}px` });
   }
   function scrollAction() {
