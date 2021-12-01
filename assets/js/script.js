@@ -34,8 +34,8 @@ $(document).ready(function () {
 
   var defaultOptions = {
     container: document.body,
-    panelSelector: '.screen-section',
-    directionThreshold: 1,
+    panelSelector: '*[data-section]',
+    directionThreshold: 100,
     delay: 0,
     duration: 500,
     easing: 'ease'
@@ -45,7 +45,7 @@ $(document).ready(function () {
   $('.scroll-btn').click(function() {
     let next = $(panel.activePanel).data('i') + 1;
     let pane = panel.panelList.find(el=> {
-      return $(el).data('i') == next
+      return $(el).data('section') == next
     })
     let p = pane
     console.log(p)
