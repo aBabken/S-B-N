@@ -443,7 +443,7 @@ body {
 
 @media only screen and (max-width: 550px) {
   .video-border-right {
-    height: 5.8vw;
+    width: 5.8vw;
   }
 }
 
@@ -464,7 +464,7 @@ body {
 
 @media only screen and (max-width: 550px) {
   .video-border-left {
-    height: 5.8vw;
+    width: 5.8vw;
   }
 }
 
