@@ -21,9 +21,7 @@ $(document).ready(function () {
   let panel = new PanelSnap(defaultOptions);
   $('.scroll-btn').click(function() {
     let next = $(panel.activePanel).data('section') + 1;
-    let pane = panel.panelList.find(el=> {
-      return $(el).data('section') == next
-    })
+    let pane = panel.panelList.find( el => $(el).data('section') == next)
     let p = pane
     console.log(p)
     panel.snapToPanel(p)
@@ -66,6 +64,16 @@ $(document).ready(function () {
             console.error(error);
           });
       }
+      $('.video-animation').click(function() {
+        if ($(this).hasClass('animation-done') && !($element.find("video").get(0).paused)) {
+          $element.find("video").get(0).pause();
+          $(this).find('img').fadeIn();
+        } else if ($(this).hasClass('animation-done') && $element.find("video").get(0).paused) {
+          $element.find("video").get(0).play();
+          $(this).find('img').fadeOut();
+        }
+      })
+
     }
 
     $(window).scroll(function () {
@@ -90,6 +98,7 @@ $(document).ready(function () {
         $element.removeClass("grow");
         if (controlVideo) {
           $element.find("video").get(0).pause();
+          $element.find('img').fadeOut();
         }
         caseTriggered = false;
       }

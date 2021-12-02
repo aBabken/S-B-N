@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Neue Haas Grotesk Display Roman';
+  src: url("../fonts/NeueHaasDisplayRoman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display Italic';
+  src: url("../fonts/NeueHaasDisplayRomanItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
 /* --------------------------------------------------------
 version: 1.0
 author: Asryan Babken
@@ -94,6 +108,7 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
+  font-weight: normal;
   vertical-align: baseline;
 }
 
@@ -187,6 +202,9 @@ input[type=number] {
 }
 
 body {
+  font-family: "Neue Haas Grotesk Display Roman", sans-serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 25px;
   font-size: 1.5625rem;
   line-height: 35px;
@@ -202,10 +220,29 @@ body {
   bottom: 38px;
   left: 38px;
   z-index: 10;
+  display: none;
   font-size: 70px;
   font-size: 4.375rem;
   line-height: 64px;
   line-height: 4rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .scroll-btn {
+    font-size: 50px;
+    font-size: 3.125rem;
+    line-height: 64px;
+    line-height: 4rem;
+    bottom: 30px;
+    left: 30px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .scroll-btn {
+    bottom: 17px;
+    left: 17px;
+  }
 }
 
 .scroll-btn.white {
@@ -305,6 +342,29 @@ body {
   height: 100%;
 }
 
+.screen-section figure img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .screen-section figure img {
+    width: 37px;
+    height: 27px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .screen-section figure img {
+    width: 43px;
+    height: 32px;
+  }
+}
+
 .text-block {
   position: absolute;
   -webkit-transition: -webkit-transform .6s ease-out;
@@ -314,7 +374,6 @@ body {
   z-index: 10;
   top: calc(100% - 90vh);
   right: 50%;
-  padding-right: 4vw;
   -webkit-transform: translate(50%, 0);
           transform: translate(50%, 0);
   max-width: calc(100% - 18.22vw);
@@ -331,14 +390,13 @@ body {
 @media only screen and (max-width: 1200px) {
   .text-block {
     top: calc(100% - 85.8vh);
-    padding-right: 4vw;
+    padding-right: 2vw;
   }
 }
 
 @media only screen and (max-width: 550px) {
   .text-block {
     top: calc(100% - 90.8vh);
-    padding-right: 2vw;
   }
 }
 
@@ -356,7 +414,13 @@ body {
 
 .main__screen--title {
   text-align: start;
+  max-width: 696px;
+  font-family: "Neue Haas Grotesk Display Italic", sans-serif;
+  font-style: italic;
   font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 32px;
+  line-height: 2rem;
 }
 
 @media only screen and (max-width: 1200px) {

@@ -46,3 +46,10 @@
     @include font-size($sizeValue);
     @include line-height($heightValue);
 }
+
+// fonts
+
+@mixin fontFamily ($font-family, $font-style) {
+    font-family: $font-family, sans-serif;
+    font-style: $font-style;
+}

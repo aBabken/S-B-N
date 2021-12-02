@@ -96,6 +96,7 @@ video {
     padding: 0;
     border: 0;
     font-size: 100%;
+    font-weight: normal;
     vertical-align: baseline;
 }
 
@@ -184,6 +185,8 @@ input[type=number] {
 }
 
 body {
+    @include fontFamily($display-roman, normal)
+    font-weight: normal;
     @include rhythm(25, 35);
     background: $white;
     color: $black;
@@ -195,8 +198,17 @@ body {
     bottom: 38px;
     left: 38px;
     z-index: 10;
-    // display: none;
+    display: none;
     @include rhythm(70, 64);
+    @include lg {
+        @include rhythm(50, 64);
+        bottom: 30px;
+        left: 30px;
+    }
+    @include sm {
+        bottom: 17px;
+        left: 17px;
+    }
     &.white {
         color: $white;
     }
