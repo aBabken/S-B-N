@@ -12,7 +12,7 @@ $(document).ready(function () {
   var defaultOptions = {
     container: document.body,
     panelSelector: '*[data-section]',
-    directionThreshold: 100,
+    directionThreshold: 50,
     delay: 0,
     duration: 800,
     easing: 'ease'
