@@ -185,12 +185,10 @@ input[type=number] {
 }
 
 body {
-    @include fontFamily($display-roman, normal)
-    font-weight: normal;
+    @include ffamily($display-roman, normal);
     @include rhythm(25, 35);
     background: $white;
     color: $black;
-    font-family: sans-serif;
 }
 .scroll-btn {
     color: $black;
@@ -199,6 +197,8 @@ body {
     left: 38px;
     z-index: 10;
     display: none;
+    cursor: pointer;
+    letter-spacing: .1em;
     @include rhythm(70, 64);
     @include lg {
         @include rhythm(50, 64);

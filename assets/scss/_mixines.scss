@@ -6,25 +6,34 @@
     @media only screen and (max-width: 1200px) {
         @content;
     }
- }
+}
 
+@mixin s-lg {
+    @media only screen and (max-width: 1024px) {
+        @content;
+    }
+}
 
+@mixin md {
+    @media only screen and (max-width: 768px) {
+        @content;
+    }
+}
 
-
- @mixin sm {
+@mixin sm {
     @media only screen and (max-width: 550px) {
         @content;
     }
- }
+}
 
 
+// 
 
-
- @mixin lg-h {
+@mixin lg-h {
     @media only screen and (min-height: 1200px) {
         @content;
     }
- }
+}
 
 
 
@@ -32,12 +41,12 @@
 
 //  
 
-@mixin font-size($sizeValue){
+@mixin font-size($sizeValue) {
     font-size: $sizeValue + px;
     font-size: (0.0625 * $sizeValue) + rem;
 }
 
-@mixin line-height($heightValue){
+@mixin line-height($heightValue) {
     line-height: $heightValue + px;
     line-height: (0.0625 * $heightValue) + rem;
 }
@@ -49,7 +58,8 @@
 
 // fonts
 
-@mixin fontFamily ($font-family, $font-style) {
+@mixin ffamily ($font-family, $font-style: normal, $font-weight: 400) {
     font-family: $font-family, sans-serif;
     font-style: $font-style;
+    font-weight: $font-weight;
 }

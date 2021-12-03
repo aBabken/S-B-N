@@ -14,11 +14,11 @@ $(document).ready(function () {
     panelSelector: '*[data-section]',
     directionThreshold: 50,
     delay: 0,
-    duration: 800,
+    duration: 1000,
     easing: 'ease'
   };
 
-  let panel = new PanelSnap(defaultOptions);
+  // let panel = new PanelSnap(defaultOptions);
   $('.scroll-btn').click(function() {
     let next = $(panel.activePanel).data('section') + 1;
     let pane = panel.panelList.find( el => $(el).data('section') == next)
@@ -131,7 +131,19 @@ $(document).ready(function () {
 
 
 
-
+  gsap.to(
+    '.letter',
+    {
+      y: "-200%",
+      stagger: 0.1,
+      duration: 1,
+      ease: 'ease-in',
+      scrollTrigger: {
+        trigger: '.line',
+        start: "top center"
+      },
+    }
+  )
 
   function mediaActions() {
     windowWidth = parseInt($(window).width());
@@ -139,54 +151,6 @@ $(document).ready(function () {
     // text.css({ "max-width": `${windowWidth - (borderWidth * 2)}px` });
   }
   function scrollAction() {
-
-
-    // header change colors
-    let lo = header.offset();
-    let y = lo.top - window.scrollY + header.height() / 2;
-    let x = lo.left + logo.width() / 2;
-    // header.addClass("sink");
-    // let element_from_point = elementsFromPoint(x, y).find((el) => {
-    //   return $(el).data("l");
-    // });
-    // console.log(element_from_point);
-    // header.removeClass("sink");
-
-    // if (element_from_point) {
-    //   let l = element_from_point.dataset.l;
-    //   if (l !== undefined) {
-    //     if (l == 1) {
-    //       if (element_from_point.tagName == "VIDEO") {
-    //         if (
-    //           !$(element_from_point)
-    //             .closest(".video-animation")
-    //             .hasClass("animation-done")
-    //         ) {
-    //           logo.removeClass("white");
-    //           menu.removeClass("white");
-    //         } else {
-    //           logo.addClass("white");
-    //           menu.addClass("white");
-    //         }
-    //       } else {
-    //         logo.addClass("white");
-    //         menu.addClass("white");
-    //       }
-    //     } else {
-    //       logo.removeClass("white");
-    //       menu.removeClass("white");
-    //     }
-    //   } else {
-    //     logo.removeClass("white");
-    //     menu.removeClass("white");
-    //   }
-    // } else {
-    //   logo.removeClass("white");
-    //   menu.removeClass("white");
-    // }
-
-
-
 
     $('._color').each(function() {
       let $object = $(this);
@@ -229,7 +193,6 @@ $(document).ready(function () {
 
     // scroll btn
     let scrollBtnOffset = $('.scroll-btn').offset().top
-    console.log($(window).scrollTop())
     if ($(window).scrollTop() >= 200) {
       $('.scroll-btn').fadeIn();
     } else {
