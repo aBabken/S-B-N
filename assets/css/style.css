@@ -658,7 +658,7 @@ body {
 }
 
 .about-content--wrapper {
-  margin: 210px 0 190px;
+  padding: 210px 0 190px;
   font-family: "Neue Haas Grotesk Text Roman", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -670,7 +670,7 @@ body {
 
 @media only screen and (max-width: 1200px) {
   .about-content--wrapper {
-    margin: 133px 0 132px;
+    padding: 133px 0 132px;
     font-size: 35px;
     font-size: 2.1875rem;
     line-height: 42px;
@@ -680,7 +680,7 @@ body {
 
 @media only screen and (max-width: 768px) {
   .about-content--wrapper {
-    margin: 73px 0 100px;
+    padding: 73px 0 100px;
     font-size: 30px;
     font-size: 1.875rem;
     line-height: 35px;
@@ -690,7 +690,7 @@ body {
 
 @media only screen and (max-width: 550px) {
   .about-content--wrapper {
-    margin: 100px 0 200px;
+    padding: 100px 0 200px;
     font-size: 25px;
     font-size: 1.5625rem;
     line-height: 30px;

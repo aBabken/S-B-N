@@ -212,19 +212,19 @@
 }
 
 .about-content--wrapper {
-    margin: 210px 0 190px;
+    padding: 210px 0 190px;
     @include ffamily($text-roman);
     @include rhythm(65, 75);
     @include lg {
-        margin: 133px 0 132px;
+        padding: 133px 0 132px;
         @include rhythm(35, 42);
     }
     @include md {
-        margin: 73px 0 100px;
+        padding: 73px 0 100px;
         @include rhythm(30, 35);
     }
     @include sm {
-        margin: 100px 0 200px;
+        padding: 100px 0 200px;
         @include rhythm(25, 30);
     }
 }
