@@ -18,7 +18,7 @@ $(document).ready(function () {
     easing: 'ease'
   };
 
-  let panel = new PanelSnap(defaultOptions);
+  // let panel = new PanelSnap(defaultOptions);
   $('.scroll-btn').click(function() {
     let next = $(panel.activePanel).data('section') + 1;
     let pane = panel.panelList.find( el => $(el).data('section') == next)
@@ -41,6 +41,83 @@ $(document).ready(function () {
 
 
 
+  let sliderMain = $('.slider-block').slick({
+    draggable: false,
+    infinite: false,
+    speed: 0,
+    arrows: false
+  })
+
+  function sliderContentReveal(active = null) {
+
+      gsap.to(`.slick-active .image-wrap`, {
+        scaleX: active ? 1 : 0,
+        duration: .5,
+        ease: Power4.easeInOut,
+      });
+    
+      gsap.to('.slider-subtitle, .slider-title',
+      {
+        opacity: active ? 0 : 1,
+        duration: .5,
+        ease: Power4.easeInOut,  
+      })
+
+  }
+
+  gsap.to(".slick-active .image-wrap", {
+    scaleX: 0,
+    duration: 1,
+    ease: Power4.easeInOut,
+    scrollTrigger: {
+      trigger: '.slider-section',
+      start: "top center",
+    },
+  });
+
+  gsap.fromTo('.opac',
+  {
+    opacity: 0
+  },
+  {
+    opacity: 1,
+    duration: .5,
+    stagger: 0.4,
+    ease: Power4.easeInOut,
+    scrollTrigger: {
+      trigger: '.opac',
+      start: "top center",
+    }    
+  })
+
+
+  $('.arrow-next').click(function() {
+    sliderContentReveal(1);
+    setTimeout(function() {
+      sliderMain.slick('slickNext')
+    }, 500)
+  })
+  $('.arrow-prev').click(function() {
+    sliderContentReveal(1);    
+    setTimeout(function() {
+      sliderMain.slick('slickPrev')
+
+    }, 500)
+  })
+  sliderMain.on(
+    "afterChange",
+    function (event, slick, currentSlide, nextSlide) {
+      console.log(slick);
+      $('.slider-arrow').removeClass('disabled');
+      if ($("[data-slick-index='0'").hasClass('slick-active')) {
+        $('.arrow-prev').addClass('disabled');
+      }
+      if ($(`[data-slick-index='${slick.slideCount - 1}'`).hasClass('slick-active')) {
+        $('.arrow-next').addClass('disabled');
+      }
+      sliderContentReveal(0);
+    }
+  );
 
 
   $(".video-animation").each(function () {
@@ -128,7 +205,6 @@ $(document).ready(function () {
       }
     });
   });
-
 
 
   gsap.to(
