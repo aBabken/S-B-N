@@ -256,20 +256,37 @@
 
 .slider-section {
     background-color: $gray;
-    height: 100vh;
+    min-height: 100vh;
 }
 .slider-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     color: $brown;
+    min-height: 100vh;
     padding: 85px 0 69px;
+    @include sm {
+        padding: 45px 0 50px;
+    }
 }
 .slider-item--inner {
     display: flex;
     justify-content: space-between;
+    @include s-md {
+        flex-direction: column;
+    }
+    @include sm {
+        padding-left: 15px;
+    }
 }
 .slider-content {
     text-transform: uppercase;
+    margin-right: 20px;
     &>div {
         max-width: 360px;
+    }
+    @include s-md {
+        margin-bottom: 52px;
     }
 }
 .slider-subtitle {
@@ -291,6 +308,17 @@
     flex: 0 0 62.65%;
     @include lg {
         flex: 0 0 64.5%;
+    }
+    @include md {
+        flex: 0 0 69.5%;
+    }
+    @include s-md {
+        flex: unset;
+        max-width: 100%;
+        align-self: end;
+    }
+    @include sm {
+        max-height: 550px;
     }
     img {
         width: 100%;
@@ -318,13 +346,19 @@
 }
 .slider-nav {
     display: flex;
-    margin-top: -28px;
+    margin-top: -30px;
     z-index: 2;
     position: relative;
     @include rhythm(20, 24);
     @include s-lg {
         @include rhythm(14, 20);
         margin-top: -19px;
+    }
+    @include s-md {
+        margin-top: auto;
+    }
+    @media (max-height: 800px) {
+        margin-top: 30px;
     }
     svg {
         @include lg {

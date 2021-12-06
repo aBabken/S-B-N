@@ -214,6 +214,12 @@ input[type=number] {
   }
 }
 
+@media only screen and (max-width: 550px) {
+  .lg-container {
+    padding: 0 18px;
+  }
+}
+
 body {
   font-family: "Neue Haas Grotesk Display Roman", sans-serif;
   font-style: normal;
@@ -746,12 +752,29 @@ body {
 
 .slider-section {
   background-color: #F1EFED;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .slider-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: #3A1E0F;
+  min-height: 100vh;
   padding: 85px 0 69px;
+}
+
+@media only screen and (max-width: 550px) {
+  .slider-inner {
+    padding: 45px 0 50px;
+  }
 }
 
 .slider-item--inner {
@@ -763,12 +786,34 @@ body {
           justify-content: space-between;
 }
 
+@media only screen and (max-width: 700px) {
+  .slider-item--inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .slider-item--inner {
+    padding-left: 15px;
+  }
+}
+
 .slider-content {
   text-transform: uppercase;
+  margin-right: 20px;
 }
 
 .slider-content > div {
   max-width: 360px;
+}
+
+@media only screen and (max-width: 700px) {
+  .slider-content {
+    margin-bottom: 52px;
+  }
 }
 
 .slider-subtitle {
@@ -820,6 +865,32 @@ body {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .slider-image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 69.5%;
+            flex: 0 0 69.5%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .slider-image {
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+    max-width: 100%;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .slider-image {
+    max-height: 550px;
+  }
+}
+
 .slider-image img {
   width: 100%;
   height: 100%;
@@ -858,7 +929,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: -28px;
+  margin-top: -30px;
   z-index: 2;
   position: relative;
   font-size: 20px;
@@ -874,6 +945,18 @@ body {
     line-height: 20px;
     line-height: 1.25rem;
     margin-top: -19px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .slider-nav {
+    margin-top: auto;
+  }
+}
+
+@media (max-height: 800px) {
+  .slider-nav {
+    margin-top: 30px;
   }
 }
 

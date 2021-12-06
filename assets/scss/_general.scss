@@ -185,6 +185,9 @@ input[type=number] {
     @include lg {
         padding: 0 30px
     }
+    @include sm {
+        padding: 0 18px
+    }
 }
 
 body {
