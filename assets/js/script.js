@@ -18,7 +18,7 @@ $(document).ready(function () {
     easing: 'ease'
   };
 
-  let panel = new PanelSnap(defaultOptions);
+  // let panel = new PanelSnap(defaultOptions);
   $('.scroll-btn').click(function() {
     let next = $(panel.activePanel).data('section') + 1;
     let pane = panel.panelList.find( el => $(el).data('section') == next)
@@ -46,7 +46,7 @@ $(document).ready(function () {
     infinite: false,
     speed: 0,
     arrows: false,
-
+    swipe: false,
   })
 
   function sliderContentReveal(active = null) {
@@ -230,14 +230,15 @@ $(document).ready(function () {
     
     $('.image img').each(function() {
       let image = this;
+      console.log(this.naturalWidth)
       image.onload = function() {
-        if (mediaChecker('max', 700)) {
-          $(image).closest('div').width(`${parseInt(this.naturalWidth) / 3.59}%`);
-        } else if (mediaChecker('max', 768)) {
-          $(image).closest('div').width(`${parseInt(this.naturalWidth) / 7.36}%`);
-        } else {
-          $(image).closest('div').width(`${parseInt(this.naturalWidth) / 18.88}%`);
-        }
+          if (mediaChecker('max', 700)) {
+            $(image).closest('div').width(`${parseInt(this.naturalWidth) / 3.59}%`);
+          } else if (mediaChecker('max', 768)) {
+            $(image).closest('div').width(`${parseInt(this.naturalWidth) / 7.36}%`);
+          } else {
+            $(image).closest('div').width(`${parseInt(this.naturalWidth) / 18.88}%`);
+          }
       }      
     })
   }

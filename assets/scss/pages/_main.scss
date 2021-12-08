@@ -411,7 +411,9 @@
 
 
 // about gallery 
-
+.images-block--inner {
+    padding-bottom: 124px;
+}
 .main-page--gallery {
     .row {
         display: flex;
@@ -432,6 +434,9 @@
                     margin-left: 0;
                 }
             }
+            &.g-ma {
+                margin: 0 auto;
+            }
             &.g-msr {
                 margin-right: 20px;
                 @include s-lg {
@@ -449,6 +454,9 @@
             }
             &.g-bottom {
                 align-self: flex-end;
+            }
+            &.g-dcenter {
+                align-self: center;
             }
             @include s-md {
                 &.g-scenter {
@@ -474,7 +482,6 @@
                     &:nth-child(2) {
                         order: 3;
                         margin-top: 110px;
-                        margin-bottom: 65px;
                     }
                     &:nth-child(3) {
                         order: 2;
@@ -484,7 +491,13 @@
         }
         &:nth-child(2) {
             margin-top: 79px;
-            @include s-md {
+            @include lg {
+                margin-top: 32px;
+            }
+            @include md {
+                margin-top: 58px;
+            }
+            @include sm {
                 margin-top: 65px;
             }
             .image {
@@ -495,6 +508,147 @@
                         align-self: flex-start;
                     }
                 }
+            }
+        }
+        &:nth-child(3) {
+            margin-top: 174px;
+            @include lg {
+                margin-top: 93px;
+            }
+            @include md {
+                margin-top: 73px;
+                padding-bottom: 150px;
+            }
+            @include s-md {
+                padding-bottom: 0;
+            }
+            @include sm {
+                margin-top: 88px;
+            }
+            .image {
+                &:nth-child(1) {
+                    margin-left: 8.45%;
+                    @include s-md {
+                        margin-left: 0;
+                    }
+                }
+                &:nth-child(2) {
+                    margin-right: 9.5%;
+                    margin-left: auto;
+                    @include md {
+                        margin-right: 1.5%;
+                    }
+                    @include s-md {
+                        margin-right: 30px;
+                        margin-left: 60px;
+                        justify-self: center;
+                    }
+                }
+                &:nth-child(3) {
+                    @include md {
+                        margin-top: auto;
+                        align-self: unset;
+                        margin-bottom: -150px;
+                    }
+                    @include s-md {
+                        margin-top: 30px;
+                        margin-left: auto;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        &:nth-child(4) {
+            margin-top: 147px;
+            @include lg {
+                margin-top: 97px;
+            }
+            @include md {
+                margin-top: 57px;
+            }
+        }
+        &:nth-child(5) {
+            margin-top: 186px;
+            @include lg {
+                margin-top: 86px;
+            }
+            @include md {
+                margin-top: 54px;
+            }
+            .image {
+                margin-top: auto;
+                &:nth-child(1) {
+                    margin-bottom: 88px;
+                    @include sm {
+                        margin-bottom: 127px;
+                    }
+                }
+                &:nth-child(2) {
+                    margin-left: auto;
+                }
+            }
+
+        }
+        &:nth-child(6) {
+            @include md {
+                margin-top: 87px;
+            }
+        }
+        &:nth-child(7) {
+            margin-top: 112px;
+            @include md {
+                margin-top: 71px;
+            }
+            @include s-md {
+                margin-top: 51px;
+            }
+            .image {
+                margin-left: auto;
+                margin-right: 16.9%;
+                @include md {
+                    margin-right: 0;
+                    margin-bottom: -25%;
+                }
+            }
+        }
+        &:nth-child(8) {
+            margin-top: 121px;
+            @include md {
+                padding-bottom: 20%;
+            }
+            .image {
+                &:nth-child(1) {
+                    @include s-md {
+                        margin-right: 33%;
+                    }
+                }
+                &:nth-child(2) {
+                    margin-top: auto;
+                    margin-left: auto;
+                    margin-bottom: 10%;
+                    @include md {
+                        margin-bottom: -20%;
+                    }            
+                    @include s-md {
+                        margin-top: 52px;
+                        margin-bottom: 0;
+                    }
+                }
+                &:nth-child(3) {
+                    margin-top: auto;
+                    margin-bottom: 10%;              
+                    @include md {
+                        margin-bottom: -20%;
+                    }            
+                    @include s-md {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        &:nth-child(9) {
+            @include md {
+                margin-top: 57px;
             }
         }
     }
