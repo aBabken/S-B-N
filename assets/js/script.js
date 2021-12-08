@@ -18,7 +18,7 @@ $(document).ready(function () {
     easing: 'ease'
   };
 
-  // let panel = new PanelSnap(defaultOptions);
+  let panel = new PanelSnap(defaultOptions);
   $('.scroll-btn').click(function() {
     let next = $(panel.activePanel).data('section') + 1;
     let pane = panel.panelList.find( el => $(el).data('section') == next)
@@ -46,7 +46,7 @@ $(document).ready(function () {
     infinite: false,
     speed: 0,
     arrows: false,
-    
+
   })
 
   function sliderContentReveal(active = null) {
