@@ -45,7 +45,8 @@ $(document).ready(function () {
     draggable: false,
     infinite: false,
     speed: 0,
-    arrows: false
+    arrows: false,
+    
   })
 
   function sliderContentReveal(active = null) {
@@ -225,6 +226,20 @@ $(document).ready(function () {
     windowWidth = parseInt($(window).width());
     borderWidth = parseInt($(".video-border-right").width());
     // text.css({ "max-width": `${windowWidth - (borderWidth * 2)}px` });
+
+    
+    $('.image img').each(function() {
+      let image = this;
+      image.onload = function() {
+        if (mediaChecker('max', 700)) {
+          $(image).closest('div').width(`${parseInt(this.naturalWidth) / 3.59}%`);
+        } else if (mediaChecker('max', 768)) {
+          $(image).closest('div').width(`${parseInt(this.naturalWidth) / 7.36}%`);
+        } else {
+          $(image).closest('div').width(`${parseInt(this.naturalWidth) / 18.88}%`);
+        }
+      }      
+    })
   }
   function scrollAction() {
 

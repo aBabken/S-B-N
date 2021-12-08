@@ -1,4 +1,7 @@
 
+// pinned video animation block
+
+
 .screen-section {
     figure {
         position: sticky;
@@ -211,6 +214,9 @@
 
 }
 
+
+// about section
+
 .about-content--wrapper {
     padding: 210px 0 190px;
     @include ffamily($text-roman);
@@ -253,6 +259,8 @@
         }
     }
 }
+
+// section slider
 
 .slider-section {
     background-color: $gray;
@@ -398,5 +406,96 @@
     }
     &:hover {
         opacity: 0.5;
+    }
+}
+
+
+// about gallery 
+
+.main-page--gallery {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        picture {
+            height: 0;
+        }
+        .image {
+            height: fit-content;
+            &.g-ml {
+                margin-left: 8.42%;
+                @include s-md {
+                    margin-left: 0;
+                }
+            }
+            &.g-msr {
+                margin-right: 20px;
+                @include s-lg {
+                    margin-right: 16px;
+                }
+                @include md {
+                    margin-right: 12px;
+                }
+                @include sm {
+                    margin-right: 10px;
+                }
+            }
+            &.g-mla {
+                margin-left: auto;
+            }
+            &.g-bottom {
+                align-self: flex-end;
+            }
+            @include s-md {
+                &.g-scenter {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+        &:nth-child(1) {
+            .image {
+                @include s-lg {
+                    &:nth-child(1) {
+                        margin-top: 30px;
+                    }
+                    &:nth-child(2) {
+                        margin-top: 30px;
+                    }
+                }
+                @include s-md {
+                    &:nth-child(1) {
+                        order: 1;
+                    }
+                    &:nth-child(2) {
+                        order: 3;
+                        margin-top: 110px;
+                        margin-bottom: 65px;
+                    }
+                    &:nth-child(3) {
+                        order: 2;
+                    }
+                }
+            }
+        }
+        &:nth-child(2) {
+            margin-top: 79px;
+            @include s-md {
+                margin-top: 65px;
+            }
+            .image {
+                &:nth-child(1) {
+                    margin-right: 22.24%;
+                    @include s-md {
+                        margin-right: auto;
+                        align-self: flex-start;
+                    }
+                }
+            }
+        }
     }
 }
