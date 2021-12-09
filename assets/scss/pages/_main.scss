@@ -1,7 +1,12 @@
 
 // pinned video animation block
 
-
+.section {
+    @media (min-height: 1081px) {
+        // max-height: 1080px;
+        // min-height: unset !important;
+    }
+}
 .screen-section {
     figure {
         position: sticky;
@@ -650,6 +655,234 @@
             @include md {
                 margin-top: 57px;
             }
+        }
+    }
+}
+
+//  who we are
+
+.whoweare-section {
+    min-height: 100vh;
+    @include sm {
+        min-height: unset;
+    }
+}
+.whoweare-inner {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    @include sm {
+        min-height: unset;
+    }
+}
+.whoweare-image {
+    padding: 19px 19px 36px;
+    background: $p-blue;
+    flex: 0 0 32.88%;
+    @include s-lg {
+        padding: 10px 16px 28px;
+        flex: 0 0 34.12%;
+    }
+    @include md {
+        padding: 8px 11px 28px;
+        flex: 0 0 34.64%;
+    }
+    @media (max-width: 700px) {  
+        flex: 0 0 29.88%;   
+    }
+    @include sm {
+        padding: 18px 17px 12px;
+        flex: 0 0 100%;  
+        &>div {
+            display: flex;
+            flex-direction: column-reverse;
+
+        } 
+    }
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+.whoweare-content {
+    background: $sage;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 67.12%;
+    padding: 30px 20px 57px;
+    @include s-lg {
+        flex: 0 0 65.88%;
+        padding: 17px 31px 40px;
+    }
+    @include md {        
+        flex: 0 0 65.36%;
+    }
+    @media (max-width: 700px) {
+        padding: 17px 15px 40px;   
+        flex: 0 0 70.12%;   
+    }
+    @include sm {
+        flex: 0 0 100%;  
+        padding: 14px 17px 30px;   
+        justify-content: space-between; 
+        min-height: 490px;
+    }
+}
+.whoweare-title {
+    margin-top: 36.6px;
+    text-transform: uppercase;
+    @include rhythm(100, 100);
+    @include xl {
+        @include rhythm(60, 65);
+    }
+    @include s-lg {
+        margin-top: 20px;
+        @include rhythm(50, 55);
+    }
+    @media (max-width: 700px) {
+        @include rhythm(30, 40);
+    }
+    @include sm {
+        margin-top: 0;        
+        margin-bottom: 5px;
+        @include rhythm(50, 55);
+    }
+}
+.whoweare-tabs {
+    display: flex;
+    @include rhythm(25,35);
+    text-transform: uppercase;
+    @include xl {
+        @include rhythm(20,30);
+    }
+    @include lg {
+        @include rhythm(14,14);
+    }
+    @media (max-width: 700px) {
+        @include rhythm(12,12);        
+    }
+    &>div {
+        opacity: .25;
+        transition: opacity .3s ease;
+        cursor: pointer;
+        z-index: 100;
+    }
+    &>div:not(:last-child) {
+        margin-right: 70px;        
+        @include lg {
+            margin-right: 31px;              
+        }       
+        @include md {
+            margin-right: 21px;              
+        }     
+        @include sm {
+            margin-right: 15px;              
+        }
+    }
+    &>div.active {
+        opacity: 1;
+    }
+    svg {
+        margin-right: 7.5px;
+        @include xl {
+            width: 18px;
+            height: 18px;
+        }
+        @include s-lg {
+            width: 13px;
+            height: 13px;
+            margin-right: 4px;
+        }
+    }
+}
+.whoweare-text {
+    margin-top: auto;
+    padding: 0 150px 0 130px;
+    @include rhythm(28,38);
+    @include xl {
+        padding: 0 100px 0 80px;
+    }
+    @include lg {
+        padding: 0 80px 0 40px;
+        @include rhythm(14,14);
+    }
+    @include md {
+        padding: 0 40px 0 20px;
+    }
+    @include sm {
+        margin-top: 30px;
+        padding: 0;
+    }
+    p {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+            @include lg {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+.trigger-block.hidden-block,
+.trigger-block-text.hidden-block {
+    display: none;
+}
+
+// image section
+
+
+.img-section--inner {
+    padding: 169px 0;
+    @include s-lg {
+        padding: 100px 0;
+    }
+}
+
+// image stack section
+
+.image-stack {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 130px 0;
+    @include s-lg {
+        padding: 70px 0;
+    }
+}
+.stack-inner {
+    width: 565px;
+    height: 780px;
+    position: relative;
+    @include s-lg {
+        width: 310px;
+        height: 400px;
+    }
+    @include sm {
+        width: 208px;
+        height: 293px;
+    }
+    &>div {
+        position: absolute;
+    }
+    .stack-item {
+        &:nth-child(1) {
+            top: 0;
+            right: 50%;
+            transform: translateX(50%);
+        }
+        &:nth-child(2) {
+            bottom: 0;
+            right: 0;            
+        }
+        &:nth-child(3) {
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);            
+        }
+        &:nth-child(4) {
+            bottom: 50%;
+            right: 10%;
+            transform: translateY(50%);            
         }
     }
 }

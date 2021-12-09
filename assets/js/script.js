@@ -18,7 +18,7 @@ $(document).ready(function () {
     easing: 'ease'
   };
 
-  // let panel = new PanelSnap(defaultOptions);
+  let panel = new PanelSnap(defaultOptions);
   $('.scroll-btn').click(function() {
     let next = $(panel.activePanel).data('section') + 1;
     let pane = panel.panelList.find( el => $(el).data('section') == next)
@@ -207,6 +207,65 @@ $(document).ready(function () {
     });
   });
 
+  function changeActiveTab(
+    _this,
+    selectorTabWrap,
+    selectorTabContent,
+    selectorTabContentText,
+    selectorTabLink,
+    classLinkActive
+  ) {
+    _this
+      .closest(selectorTabWrap)
+      .querySelectorAll(selectorTabLink)
+      .forEach((element) => {
+        element.classList.remove(classLinkActive);
+      });
+
+    _this.classList.add(classLinkActive);
+
+    const indexTab = [..._this.parentElement.children].indexOf(_this);
+    const newActiveTabContent = _this
+      .closest(selectorTabWrap)
+      .querySelectorAll(selectorTabContent)[indexTab];
+    const newActiveTabContentText = _this
+      .closest(selectorTabWrap)
+      .querySelectorAll(selectorTabContentText)[indexTab];
+    _this
+      .closest(selectorTabWrap)
+      .querySelectorAll(selectorTabContent)
+      .forEach((element) => {
+        element.classList.add("hidden-block");
+      });
+
+      _this
+      .closest(selectorTabWrap)
+      .querySelectorAll(selectorTabContentText)
+      .forEach((element) => {
+        element.classList.add("hidden-block");
+      });
+
+    newActiveTabContent.classList.remove("hidden-block");
+    newActiveTabContentText.classList.remove("hidden-block");
+  }
+  // trigger for comments
+  document.querySelectorAll(".tab").forEach((element) => {
+    element.addEventListener("click", function (e) {
+      e.preventDefault();
+      let _this = this;
+      changeActiveTab(
+        _this,
+        ".section-trigger--wrapper",
+        ".trigger-block",
+        ".trigger-block-text",
+        ".tab",
+        "active"
+      );
+
+      return false;
+    });
+  });
+
 
   gsap.to(
     '.letter',
@@ -221,7 +280,34 @@ $(document).ready(function () {
       },
     }
   )
-
+  gsap.fromTo('[data-reveal_b]',
+  { opacity: 0, y: 100 },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    stagger: .3,
+    ease: Power4.easeInOut,
+    scrollTrigger: {
+      trigger: '[data-reveal_b]',
+      start: 'center bottom'
+    }
+  }
+  )
+  gsap.fromTo('[data-stack]',
+  { opacity: 0},
+  {
+    opacity: 1,
+    stagger: .2,
+    duration: .1,
+    delay: .5,
+    ease: SteppedEase.config(3),
+    scrollTrigger: {
+      trigger: '[data-stack]',
+      start: 'top 60%'
+    }
+  }
+  )
   function mediaActions() {
     windowWidth = parseInt($(window).width());
     borderWidth = parseInt($(".video-border-right").width());
@@ -230,7 +316,6 @@ $(document).ready(function () {
     
     $('.image img').each(function() {
       let image = this;
-      console.log(this.naturalWidth)
       image.onload = function() {
           if (mediaChecker('max', 700)) {
             $(image).closest('div').width(`${parseInt(this.naturalWidth) / 3.59}%`);
@@ -239,6 +324,21 @@ $(document).ready(function () {
           } else {
             $(image).closest('div').width(`${parseInt(this.naturalWidth) / 18.88}%`);
           }
+          
+          gsap.fromTo($(image).closest('.row')[0],
+          { opacity: 0, y: 100 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            stagger: .3,
+            ease: Power4.easeInOut,
+            scrollTrigger: {
+              trigger: $(image).closest('.row')[0],
+              start: 'center 80%'
+            }
+          }
+          )
       }      
     })
   }
