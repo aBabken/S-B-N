@@ -423,6 +423,8 @@
     .row {
         display: flex;
         flex-wrap: wrap;
+        opacity: 0;
+        transform: translateY(100px);
         img {
             width: 100%;
             height: auto;
@@ -658,7 +660,10 @@
         }
     }
 }
-
+[data-reveal_b] {
+    opacity: 0;
+    transform: translateY(100px);
+}
 //  who we are
 
 .whoweare-section {

@@ -299,12 +299,12 @@ $(document).ready(function () {
   {
     opacity: 1,
     stagger: .2,
-    duration: .1,
-    delay: .5,
+    duration: .3,
+    delay: .1,
     ease: SteppedEase.config(3),
     scrollTrigger: {
       trigger: '[data-stack]',
-      start: 'top 60%'
+      start: 'center center'
     }
   }
   )
