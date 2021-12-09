@@ -335,7 +335,7 @@ $(document).ready(function () {
             ease: Power4.easeInOut,
             scrollTrigger: {
               trigger: $(image).closest('.row')[0],
-              start: 'center 80%'
+              start: 'center bottom'
             }
           }
           )
