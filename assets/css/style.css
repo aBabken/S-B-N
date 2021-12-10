@@ -988,6 +988,7 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  max-width: 1700px;
 }
 
 .line .word-wrapper {
@@ -997,7 +998,7 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-right: 25px;
+  margin-right: 18px;
 }
 
 .line .word-wrapper .letter-wrapper {

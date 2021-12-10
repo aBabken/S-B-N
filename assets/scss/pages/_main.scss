@@ -243,10 +243,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    max-width: 1700px;
     .word-wrapper {
         display: flex;
         justify-content: flex-start;
-        margin-right: 25px;
+        margin-right: 18px;
         .letter-wrapper {
             display: flex;
             overflow: hidden;
