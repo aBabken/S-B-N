@@ -308,6 +308,23 @@ $(document).ready(function () {
     }
   }
   )
+
+  $('.images-block--inner .row').each(function() {
+    gsap.to(this,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: .3,
+        ease: Power4.easeInOut,
+        scrollTrigger: {
+          trigger: this,
+          start: 'center bottom',
+        }
+      }
+      )
+  })
+
   function mediaActions() {
     windowWidth = parseInt($(window).width());
     borderWidth = parseInt($(".video-border-right").width());
@@ -324,21 +341,7 @@ $(document).ready(function () {
           } else {
             $(image).closest('div').width(`${parseInt(this.naturalWidth) / 18.88}%`);
           }
-          
-          gsap.fromTo($(image).closest('.row')[0],
-          { opacity: 0, y: 100 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            stagger: .3,
-            ease: Power4.easeInOut,
-            scrollTrigger: {
-              trigger: $(image).closest('.row')[0],
-              start: 'center bottom'
-            }
-          }
-          )
+
       }      
     })
   }
@@ -384,8 +387,7 @@ $(document).ready(function () {
 
 
     // scroll btn
-    let scrollBtnOffset = $('.scroll-btn').offset().top
-    if ($(window).scrollTop() >= 200) {
+    if ($(window).scrollTop() >= 200 && $(window).scrollTop() + $(window).height() + 100 < $(document).height()) {
       $('.scroll-btn').fadeIn();
     } else {
       $('.scroll-btn').fadeOut();
