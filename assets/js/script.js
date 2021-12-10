@@ -273,7 +273,7 @@ $(document).ready(function () {
     {
       y: "-200%",
       stagger: 0.1,
-      duration: .5,
+      duration: .2,
       ease: 'ease-in',
       scrollTrigger: {
         trigger: '.line',
