@@ -248,6 +248,15 @@
         display: flex;
         justify-content: flex-start;
         margin-right: 18px;
+        @include lg {
+            margin-right: 10px;
+        }
+        @include md {
+            margin-right: 7px;
+        }
+        @include sm {
+            margin-right: 5px;
+        }
         .letter-wrapper {
             display: flex;
             overflow: hidden;

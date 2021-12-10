@@ -1001,6 +1001,24 @@ body {
   margin-right: 18px;
 }
 
+@media only screen and (max-width: 1200px) {
+  .line .word-wrapper {
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .line .word-wrapper {
+    margin-right: 7px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .line .word-wrapper {
+    margin-right: 5px;
+  }
+}
+
 .line .word-wrapper .letter-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
