@@ -19,7 +19,8 @@ $(document).ready(function () {
   };
 
   let panel = new PanelSnap(defaultOptions);
-  $('.scroll-btn').click(function() {
+  $('.scroll-btn').click(function(e) {
+    e.preventDefault();
     let next = $(panel.activePanel).data('section') + 1;
     let pane = panel.panelList.find( el => $(el).data('section') == next)
     let p = pane

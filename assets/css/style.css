@@ -236,6 +236,7 @@ body {
   line-height: 2.1875rem;
   background: #FFFFFF;
   color: #000000;
+  scroll-behavior: smooth;
 }
 
 .scroll-btn {
@@ -989,7 +990,17 @@ body {
           justify-content: flex-start;
 }
 
-.line .letter-wrapper {
+.line .word-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-right: 25px;
+}
+
+.line .word-wrapper .letter-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -998,18 +1009,18 @@ body {
           transform: translateZ(0);
 }
 
-.line .letter-wrapper .letter {
+.line .word-wrapper .letter-wrapper .letter {
   display: block;
   position: relative;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
 }
 
-.line .letter-wrapper .letter span {
+.line .word-wrapper .letter-wrapper .letter span {
   display: block;
 }
 
-.line .letter-wrapper .letter span + span {
+.line .word-wrapper .letter-wrapper .letter span + span {
   position: absolute;
   top: 0;
   left: 0;

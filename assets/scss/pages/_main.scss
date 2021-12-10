@@ -243,25 +243,31 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    .letter-wrapper {
+    .word-wrapper {
         display: flex;
-        overflow: hidden;
-        transform: translateZ(0);
-        .letter {
-            display: block;
-            position: relative;
-            transform: translateY(100%);
-            span {
+        justify-content: flex-start;
+        margin-right: 25px;
+        .letter-wrapper {
+            display: flex;
+            overflow: hidden;
+            transform: translateZ(0);
+            .letter {
                 display: block;
-                &+span {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    transform: translateY(200%);
+                position: relative;
+                transform: translateY(100%);
+                span {
+                    display: block;
+                    &+span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        transform: translateY(200%);
+                    }
                 }
             }
         }
+
     }
 }
 
