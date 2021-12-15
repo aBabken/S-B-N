@@ -1,0 +1,20 @@
+// 
+
+// info
+
+.page__info-section {
+    padding: 50px 0 110px;
+    @include lg {
+        padding: 77px 0 100px;
+    }
+    @include sm {
+        padding: 60px 0 165px;
+    }
+}
+.title-row {
+    display: flex;
+    justify-content: space-between;
+}
+.info-title {
+    max-width: 754px;
+}

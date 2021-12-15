@@ -18,7 +18,7 @@ $(document).ready(function () {
     easing: 'ease'
   };
 
-  let panel = new PanelSnap(defaultOptions);
+  // let panel = new PanelSnap(defaultOptions);
   $('.scroll-btn').click(function(e) {
     e.preventDefault();
     let next = $(panel.activePanel).data('section') + 1;
@@ -267,20 +267,24 @@ $(document).ready(function () {
     });
   });
 
+  document.querySelectorAll(".line").forEach((element) => {
+    let duration = $(element).data('duration') ? $(element).data('duration') : 1;
+    let letter = $(element).find('.letter');
+    gsap.to(
+      letter,
+      {
+        y: "-200%",
+        stagger: 0.1,
+        duration: duration,
+        ease: 'ease-in',
+        scrollTrigger: {
+          trigger: element,
+          start: "top center"
+        },
+      }
+    )
+  });
 
-  gsap.to(
-    '.letter',
-    {
-      y: "-200%",
-      stagger: 0.1,
-      duration: .2,
-      ease: 'ease-in',
-      scrollTrigger: {
-        trigger: '.line',
-        start: "top center"
-      },
-    }
-  )
   gsap.fromTo('[data-reveal_b]',
   { opacity: 0, y: 100 },
   {
@@ -440,7 +444,8 @@ $(document).ready(function () {
     // return our results
     return elements;
   }
-  // var Scrollbar = window.Scrollbar;
 
-  // Scrollbar.init(document.querySelector('.scroll'));
+
+  // $('html').height($('.wrapper').height());
+  const swup = new Swup()
 });

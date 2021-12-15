@@ -434,6 +434,10 @@
 // about gallery 
 .images-block--inner {
     padding-bottom: 124px;
+    @include ffamily($text-roman);
+    @include s-lg {
+        padding-bottom: 58px;
+    }
 }
 .main-page--gallery {
     .row {
@@ -674,6 +678,38 @@
                 margin-top: 57px;
             }
         }
+    }
+}
+.f-row.row {
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 100px;
+    display: none;
+    @include s-lg {
+        display: flex;
+    }
+}
+.gallery-more {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    span {
+        margin-right: 8.4px;
+    }
+    @include rhythm(35, 45);
+    @include md {
+        @include rhythm(20, 30);        
+        svg {
+            width: 30px;
+            height: 20px;
+        }
+    }
+    @include sm {
+        svg {
+            width: 24px;
+            height: 16px;
+        }
+        @include rhythm(20, 30);
     }
 }
 [data-reveal_b] {

@@ -107,12 +107,14 @@ li::marker {
 ul {
     list-style-type: none;
 }
+
 a,
 button,
 textarea,
 input {
     outline: none;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -146,11 +148,13 @@ q:after {
     content: '';
     content: none;
 }
+
 html {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -176,18 +180,22 @@ input[type=number] {
     width: 100%;
     margin: 0 auto;
     padding: 0 16px;
+
     @include sm {
         padding: 0 8px;
     }
 }
+
 .lg-container {
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
     padding: 0 47px;
+
     @include lg {
         padding: 0 30px
     }
+
     @include sm {
         padding: 0 18px
     }
@@ -199,7 +207,11 @@ body {
     background: $white;
     color: $black;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
 }
+
 .scroll-btn {
     color: $black;
     position: fixed;
@@ -210,17 +222,66 @@ body {
     cursor: pointer;
     letter-spacing: .1em;
     @include rhythm(70, 64);
+
     @include lg {
         @include rhythm(50, 64);
         bottom: 30px;
         left: 30px;
     }
+
     @include sm {
         bottom: 17px;
         left: 17px;
     }
+
     &.white {
         color: $white;
     }
 }
+
+.picture__screen {
+    min-height: 100vh;
+
+    img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+
+.section-title {
+    @include rhythm(100, 100);
+    @include ffamily($display-roman);
+
+    @include xl {
+        @include rhythm(60, 60);
+    }
+
+    @include md {
+        @include rhythm(50, 50);
+    }
+
+    @include sm {
+        @include rhythm(30, 32);
+    }
+}
+
+.transition-fade {
+    transition: 1s;
+    opacity: 1;
+    transform: translateY(0);
+    transform-origin: top;
+}
+
+html.is-animating .transition-fade {
+    transform: translateY(-100px);
+    opacity: 0;
+}
+
+html.is-leaving .transition-fade {
+    transform: translateY(-100px);
+    opacity: 0;
+}
+
+
 
