@@ -207,9 +207,6 @@ body {
     background: $white;
     color: $black;
     scroll-behavior: smooth;
-    overflow-x: hidden;
-    width: 100%;
-    height: 100%;
 }
 
 .scroll-btn {
@@ -250,6 +247,7 @@ body {
 }
 
 .section-title {
+    display: block;
     @include rhythm(100, 100);
     @include ffamily($display-roman);
 
@@ -264,24 +262,115 @@ body {
     @include sm {
         @include rhythm(30, 32);
     }
+
+    @include m-sm {
+        @include rhythm(25, 30);
+    }
+}
+.section-subtitle {
+    display: block;
+    @include rhythm(50, 60);
+    @include ffamily($text-roman);
+    @include xl {
+        @include rhythm(26, 32);
+    }
+
+    @include md {
+        @include rhythm(20, 25);
+    }
+
+    @include sm {
+        @include rhythm(12, 16);
+    }
+    
+}
+.section-text {
+    @include rhythm(65, 75);
+    @include ffamily($text-roman);
+    @include xl {
+        @include rhythm(35, 40);
+    }
+
+    @include md {
+        @include rhythm(25, 30);
+    }
+
+    @include sm {
+        @include rhythm(20, 25);
+    }
+}
+.text-reveal {
+    display: block;
+    overflow: hidden;
+    span {
+        display: block;
+        overflow: hidden;
+        transform: translateY(100%);
+    }
+}
+.section-list {
+    display: flex;
+    justify-content: flex-end;
+}
+.list-inner {
+    display: flex;
+    flex: 0 0 50%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include lg {
+        flex: 0 0 40%; 
+    }
+    @include md {
+        flex: 0 0 50%; 
+    }
+    @include sm {
+        flex: 0 0 100%; 
+    }  
+}
+.list-column {
+    flex: 0 0 45%; 
+    @include sm {
+        flex: 0 0 100%; 
+    }   
+}
+.list-item {
+    &:not(:last-child) {
+        margin-bottom: 18px;
+        @include lg {
+            margin-bottom: 15px;
+        }
+    }
+    @include rhythm(20, 25);
+    @include lg {
+        @include rhythm(12, 14);
+    }
+}
+.list-item_title {
+    @include ffamily($display-medium, normal, 500);
+}
+.list-item_text {
+    max-width: 257px;
+    @include lg {
+        max-width: 124px;
+    }
 }
 
-.transition-fade {
-    transition: 1s;
-    opacity: 1;
-    transform: translateY(0);
-    transform-origin: top;
-}
+// .transition-fade {
+//     transition: .5s;
+//     opacity: 1;
+//     // transform: translateY(0);
+//     transform-origin: top;
+// }
 
-html.is-animating .transition-fade {
-    transform: translateY(-100px);
-    opacity: 0;
-}
+// html.is-animating .transition-fade {
+//     transform: translateY(-100px);
+//     opacity: 0;
+// }
 
-html.is-leaving .transition-fade {
-    transform: translateY(-100px);
-    opacity: 0;
-}
+// html.is-leaving .transition-fade {
+//     transform: translateY(-100px);
+//     opacity: 0;
+// }
 
 
 
