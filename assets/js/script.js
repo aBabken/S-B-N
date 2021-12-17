@@ -177,6 +177,102 @@ $(document).ready(function () {
       });
     });
 
+    
+    $(".video-animation_default").each(function () {
+      var caseTriggered = false;
+      var animationFinished = false;
+      var $element = $(this);
+      var controlVideo = true;
+      windowWidth = parseInt($(window).width());
+      borderWidth = parseInt($(".video-border-right").width());
+
+      // text.css({ "max-width": `${windowWidth - (borderWidth * 2)}px` });
+
+      if (controlVideo) {
+        var promise = $element.find("video").get(0).play();
+        if (promise !== undefined) {
+          promise
+            .then(function () {
+              $element.find("video").get(0).pause();
+            })
+            .catch(function (error) {
+              console.error(error);
+            });
+        }
+        $(".video-animation_default").click(function () {
+          if (
+            $(this).hasClass("animation-done") &&
+            !$element.find("video").get(0).paused
+          ) {
+            $element.find("video").get(0).pause();
+            $(this).find("img").fadeIn();
+          } else if (
+            $(this).hasClass("animation-done") &&
+            $element.find("video").get(0).paused
+          ) {
+            $element.find("video").get(0).play();
+            $(this).find("img").fadeOut();
+          }
+        });
+      }
+
+      $(window).scroll(function () {
+        var scrollTop = $(window).scrollTop();
+        var elOffTop = $element.offset().top;
+        var transitionFinish = elOffTop + 150;
+        var percentageAnim =
+          ((scrollTop - elOffTop) * 1) / (transitionFinish - elOffTop);
+        var percentageAnimNeg = 1 - percentageAnim;
+        //   windowWidth = parseInt($(window).width());
+        //   borderWidth = parseInt($(".video-border-right").width())
+
+        //   text.css({ "max-width": `${windowWidth - borderWidth * 2}px` });
+
+        if (scrollTop > elOffTop && caseTriggered === false) {
+          $element.addClass("grow");
+          if (controlVideo) {
+            $element.find("video").get(0).play();
+          }
+          caseTriggered = true;
+        } else if (scrollTop == 0 && caseTriggered === true) {
+          $element.removeClass("grow");
+          if (controlVideo) {
+            $element.find("video").get(0).pause();
+            $element.find("img").fadeOut();
+          }
+          caseTriggered = false;
+        }
+        if (scrollTop > transitionFinish && animationFinished === false) {
+          $element.addClass("animation-done");
+          animationFinished = true;
+        } else if (scrollTop < transitionFinish && animationFinished === true) {
+          $element.removeClass("animation-done");
+          animationFinished = false;
+        }
+        if (scrollTop > elOffTop && scrollTop < transitionFinish) {
+          $element
+            .find(".video-border_def.video-border-top")
+            .css({ transform: "scale(1, " + percentageAnimNeg + ")" });
+          $element
+            .find(".video-border_def.video-border-bottom")
+            .css({ transform: "scale(1, " + percentageAnimNeg + ")" });
+          $element
+            .find(".video-border_def.video-border-left")
+            .css({ transform: "scale(" + percentageAnimNeg + ", 1)" });
+          $element
+            .find(".video-border_def.video-border-right")
+            .css({ transform: "scale(" + percentageAnimNeg + ", 1)" });
+
+          let _scrollResponsibleTop = mediaChecker("max", 1200)
+            ? scrollTop * 1.5
+            : scrollTop;
+          $(text).css({
+            transform: `translate(50%, -${_scrollResponsibleTop || 0}px)`,
+          });
+        }
+      });
+    });
+
     function changeActiveTab(
       _this,
       selectorTabWrap,
