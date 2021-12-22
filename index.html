@@ -1825,7 +1825,13 @@
 
 
         <a href="#" class="scroll-btn _color">
-            <span>Arbeid</span>
+            <div class="btn-inner">
+                <span>Arbeid</span>
+                <div id="firstLottie"></div>
+    
+                <!-- <script
+                src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player id="firstLottie" src="assets/img/arrow.json" background="transparent" speed="1"></lottie-player> -->
+            </div>
         </a>
 
         <!-- <div class="transition-fade"></div> -->
@@ -1839,6 +1845,7 @@
 <script src="assets/js/libs/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script src="assets/js/libs/panelsnap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
@@ -1847,5 +1854,33 @@
 <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
 <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 <script src="assets/js/script.js"></script>
+<script>
+    var container = document.getElementById('firstLottie');
+          animData = bodymovin.loadAnimation({
+              container: container,
+              renderer: 'svg',
+              autoplay: false,
+              loop: true,
+              path : 'assets/img/arrow.json'
+          });
+    
+    var animationStart = 0;
+    $(window).scroll(function(){
+        if (animationStart < 200) {
+            animData.playSegments([animationStart,animationStart+1], true);
+            animationStart++;
+        } else {
+            animationStart = 0;
+        }
+        var svg = $(animData.wrapper.getElementsByTagName("svg")[0]).find('path');
+        svg.css('transition', '.3s ease')
+        if ($('.scroll-btn').hasClass('white')) {
+            svg.css('stroke', '#fff')
+        } else {
+            svg.css('stroke', '#000')
+        }
+    })
+    
+    </script>
 </body>
 </html>

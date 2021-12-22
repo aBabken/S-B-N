@@ -38,6 +38,12 @@
 }
 
 
+@mixin s-sm {
+    @media only screen and (max-width: 425px) {
+        @content;
+    }
+}
+
 @mixin m-sm {
     @media only screen and (max-width: 360px) {
         @content;

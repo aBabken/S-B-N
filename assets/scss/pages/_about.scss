@@ -1,0 +1,176 @@
+// 
+.about_gallery-screen {
+}
+.about-page--gallery {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0;
+        transform: translateY(100px);
+        &:nth-child(1) {
+            padding: 95px 0 185px;
+            @include s-lg {
+                padding: 89px 0 77px;
+            }
+            @include md {
+                padding: 104px 0 163px;
+            }
+            @include sm {
+                padding: 36px 0 64px;
+            }
+        }
+        
+        &:nth-child(2) {
+            padding-bottom: 181px;
+            @include lg {
+                padding-bottom: 89px;
+            }
+            @include md {
+                padding-bottom: 181px;
+            }
+            @include sm {
+                padding-bottom: 83px;
+            }
+            .image {
+                &:nth-child(1) {
+                    margin-right: 22.24%;
+                    @include s-md {
+                        margin-top: 25%;
+                        margin-right: auto;
+                        align-self: flex-end;
+                    }
+                }
+            }
+        }
+        
+        &:nth-child(3) {
+            padding-bottom: 150px;
+            @include lg {
+                padding-bottom: 79px;
+            }
+            @include md {
+                padding-bottom: 250px;
+            }
+            @include sm {
+                padding-bottom: 88px;
+            }
+            .image {
+                &:nth-child(1) {
+                    margin-left: 8.45%;
+                    @include s-md {
+                        margin-left: 0;
+                    }
+                }
+                &:nth-child(2) {
+                    margin-right: 9.5%;
+                    margin-left: auto;
+                    @include md {
+                        margin-right: 1.5%;
+                    }
+                    @include s-md {
+                        margin-right: 30px;
+                        margin-left: 60px;
+                        justify-self: center;
+                    }
+                }
+                &:nth-child(3) {
+                    @include md {
+                        margin-top: auto;
+                        align-self: unset;
+                        margin-bottom: -20%;
+                    }
+                    @include s-md {
+                        margin-left: auto;
+                    }
+                    @include sm {
+                        margin-bottom: -10%;
+                        margin-top: -10%;
+                    }
+                }
+            }
+        }
+        &:nth-child(4) {
+            padding-bottom: 186px;
+            @include lg {
+                padding-bottom: 97px;
+            }
+            @include md {
+                padding-bottom: 67px;
+            }
+            @include sm {
+                padding-bottom: 42px;
+            }
+            
+        }
+        &:nth-child(5) {
+            padding-bottom: 86px;
+            @include lg {
+                padding-bottom: 48px;
+            }
+            @include md {
+                padding-bottom: 62px;
+            }
+            @include sm {
+                padding-bottom: 5px;
+            }
+            .image {
+                &:nth-child(2) {
+                    @include md {
+                        margin-top: 10%;
+                    }
+                    @include sm {
+                        margin-top: 15%;
+                    }
+                }
+            }
+        }
+        &:nth-child(6) {
+            padding-bottom: 55px;
+            @include md {
+                align-items: flex-end;
+                flex-wrap: wrap;                
+                .image {
+                    &:nth-child(1) {
+                        order: 1;
+                    }
+                    &:nth-child(2) {
+                        order: 3;
+                        margin-top: 5px;
+                    }
+                    &:nth-child(3) {
+                        order: 2;
+                    }
+                }
+            }
+            @include s-md {            
+                .image {
+                    &:nth-child(3) {
+                        margin-top: 20px;
+                    }
+                    &:nth-child(2) {
+                        margin-top: 33px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.about-content--wrapper_page {
+    padding: 210px 0 190px;
+    @include ffamily($text-roman);
+    @include rhythm(65, 75);
+    @include lg {
+        padding: 133px 0 132px;
+        @include rhythm(35, 42);
+    }
+    @include md {
+        padding: 73px 0 100px;
+        @include rhythm(30, 35);
+    }
+    @include sm {
+        padding: 50px 0 65px;
+        @include rhythm(18, 25);
+    }
+}

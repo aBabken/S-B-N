@@ -43,56 +43,76 @@
         max-width: 96px;
     }
 }
-.hng-top_row {
-    display: flex;
-    justify-content: space-between;
-    padding: 93px 0 73px;
-    @include xl {
-        padding: 75px 0 40px;
-    }
-    @include md {
-        padding: 50px 0 40px;
-    }
 
-    @include sm {
-        padding: 55px 0 35px;
+
+// 
+.hng-trigger {
+    background: $p-blue;
+    .video-border_def {   
+        background: $p-blue;
     }
+}
+
+// 
+
+.section-slider {
+    background: $brown;
+}
+.hng-slider-inner {
+    padding: 143px 75px;
+    @include xl {
+        padding: 76px 34px;
+    }
+    @include sm {
+        padding: 50px 20px;
+    }
+    @include s-sm {
+        padding: 43px 0 19px;
+    }
+}
+.hng-slider {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include md  {
+        max-width: 688px;
+    }
+}
+.hng-slider--item {
+    flex: 0 0 31.15%;
     img {
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
     }
-    .image-wrap {
-        display: flex;
-        align-items: flex-end;
+    @include md {
         &:nth-child(1) {
-            flex: 0 0 57.9%;
+            order: 3;
+            flex: 0 0 100%;
+            margin-top: 30px;
         }
         &:nth-child(2) {
-            flex: 0 0 41.2%;
+            order: 1;
+            flex: 0 0 46.2%;
         }
-        @include sm {
-            &:nth-child(1) {
-                flex: 0 0 62.8%;
-            }
-            &:nth-child(2) {
-                flex: 0 0 35.8%;
-            }
+        &:nth-child(3) {
+            order: 2;
+            flex: 0 0 46.2%;
         }
     }
-}
-.hng-text {
-    max-width: 97%;
-}
-.hng-list {
-    padding: 295px 0 0;
-    @include xl {
-        padding: 100px 0 0;
+    @include s-sm {
+        flex: unset !important;
+        order: unset !important;
+        margin: 0 0 0 0 !important;
+        max-height: 500px;
     }
-    @include md {
-        padding: 100px 0 0;
-    }
-    @include sm {
-        padding: 93px 0 0;
+}
+.slider-scroll {
+    display: none;
+    @include s-sm {
+        display: block;
+        color: #fff;
+        margin-bottom: 14px;
+        @include rhythm(20,24);
     }
 }
