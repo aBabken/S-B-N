@@ -203,6 +203,20 @@ input[type=number] {
         padding: 0 18px
     }
 }
+.md-container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 75px;
+
+    @include lg {
+        padding: 0 28px
+    }
+
+    @include sm {
+        padding: 0 18px
+    }
+}
 
 
 // 
@@ -218,12 +232,11 @@ body {
 // 
 
 .scroll-btn {
-    color: $black;
-    position: fixed;
+    color: $white;
+    position: absolute;
     bottom: 38px;
     left: 38px;
     z-index: 10;
-    display: none;
     pointer-events: none;
     letter-spacing: .1em;
     transition: .3s ease;
@@ -264,7 +277,11 @@ body {
         }
     }
 }
+.section {
+    position: relative;
+}
 .section-title {
+    text-transform: uppercase;
     display: block;
     @include rhythm(100, 100);
     @include ffamily($display-roman);
@@ -286,7 +303,9 @@ body {
     }
 }
 .section-subtitle {
+    text-transform: uppercase;
     display: block;
+    margin-left: 20px;
     @include rhythm(50, 60);
     @include ffamily($text-roman);
     @include xl {
@@ -301,6 +320,25 @@ body {
         @include rhythm(12, 16);
     }
     
+}
+.md-subtitle-l {
+    @include sm {
+        max-width: 110px;
+    }
+}
+.lg-subtitle-l {
+    &.info-subtitle {
+        max-width: 450px;
+        @include xl {
+            max-width: 250px;
+        }
+        @include md {
+            max-width: 180px;
+        }
+        @include sm {
+            max-width: 130px;
+        }
+    }
 }
 .section-text {
     @include rhythm(65, 75);
@@ -403,23 +441,27 @@ body {
 // 
 
 .video-animation_default {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    padding: 16px 0;
     max-height: 100vh;
     min-height: none;
     overflow: visible;
-    img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        @include lg {
-            width: 37px;
-            height: 27px;
-        }
-        @include sm {
-            width: 43px;
-            height: 32px;
-        }
-    }
+    // img {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     display: none;
+    //     @include lg {
+    //         width: 37px;
+    //         height: 27px;
+    //     }
+    //     @include sm {
+    //         width: 43px;
+    //         height: 32px;
+    //     }
+    // }
     &.grow {
         max-width: 100%;
         padding-left: 0;
@@ -428,6 +470,12 @@ body {
         height: auto;
         max-height: none;
         min-height: 100vh;
+        figure {
+            video {
+                margin: 16px 0;
+                height: calc(100% - 32px);
+            }
+        }
     }
     @include lg {
         padding-top: 5.5vh;
@@ -505,7 +553,7 @@ body {
         padding: 25px 0;
     }
 }
-.resolve-inner {
+.hng-resolve-inner {
     background: $p-blue;
 }
 .resolve-title {
@@ -553,6 +601,13 @@ body {
     }
     @include md {
         max-width: 598px;
+    }
+    
+    span:not(:last-child) {
+        margin-bottom: 30px;
+        @include md {
+            margin-bottom: 20px;
+        }
     }
 }
 // 
@@ -646,6 +701,22 @@ body {
     }
     @include sm {
         max-width: 100%; 
+    }
+}
+.reverse-image_info {
+    .image_info-text {
+        p {
+            margin-bottom: 150px;
+            @include lg {
+                margin-bottom: 50px;
+            }
+            @include md {
+                margin-bottom: 20px;
+            }
+            @include sm {
+                margin-bottom: 75px;
+            }
+        }
     }
 }
 .image_info-text {
@@ -889,6 +960,9 @@ body {
 }
 .trigger-content_inner {
     padding: 0 0 50px;
+    @include sm {
+        padding-bottom: 20px;
+    }
 }
 
 // 
@@ -927,7 +1001,6 @@ body {
     }
 }
 .page-content__text {
-    opacity: .6;
     flex: 0 0 43%;
     display: flex;
     justify-content: center;
@@ -962,9 +1035,36 @@ body {
         object-fit: fill;
     }
 }
+.n-py {
+    & > div {
+        padding: 0;
+    }
+}
+.section.s-pb {
+    padding-bottom: 100px;
+    @include lg {
+        padding-bottom: 75px;
+    }
+    @include md {
+        padding-bottom: 60px;
+    }
+    @include sm {
+        padding-bottom: 100px;
+    }
+}
 
-
-
+.trigger-section {
+    padding: 100px 0;
+    @include lg {
+        padding: 75px 0;
+    }
+    @include md {
+        padding: 50px 0;
+    }    
+    @include sm {
+        padding: 95px 0;
+    }
+}
 
 
 

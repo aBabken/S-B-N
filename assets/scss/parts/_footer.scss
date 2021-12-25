@@ -1,8 +1,8 @@
 .footer {
-    padding: 123px 0 106px;
+    padding: 123px 0 70px;
     @include ffamily($text-roman);
     @include lg {
-        padding: 100px 0 65px;
+        padding: 100px 0 55px;
     }
     @include sm {
         padding: 130px 0 44px;

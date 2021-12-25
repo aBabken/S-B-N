@@ -1,0 +1,18 @@
+// 
+
+.mob-resolve-inner,
+.mob-trigger > div {
+    background: $sage;
+}
+.mob-trigger {
+    padding: 120px 0 0;
+    @include lg {
+        padding: 75px 0;
+    }
+    @include md {
+        padding: 60px 0;
+    }
+    @include sm {
+        padding: 95px 0;
+    }
+}

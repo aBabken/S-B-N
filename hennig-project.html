@@ -37,20 +37,26 @@
     <main class="main">
 
 
-        <div class="section screen-section picture__screen" data-section="1">
+        <div class="section screen-section picture__screen" data-section>
             <picture>
-                <source src="assets/img/default-img.jpg" type="image/jpeg">
-                <img src="assets/img/default-img.jpg" alt="Hennig-Olsen Freia">
+                <source media="(max-width: 375px)" srcset="assets/img/hennig/bgM.jpg">
+                <source media="(max-width: 768px)" srcset="assets/img/hennig/bgT.jpg">
+                <source media="(max-width: 1024px)" srcset="assets/img/hennig/bgL.jpg">
+                <source srcset="assets/img/hennig/bg.jpg" type="image/jpeg">
+                <img src="assets/img/hennig/bg.jpg" alt="Hennig-Olsen Freia">
             </picture>
         </div>
 
 
-        <div class="section page__info-section" data-section="2">
+        <div class="section page__info-section" data-section>
               <div class="xl-container">
                   <div class="page__info--inner">
                       <div class="title-row">
-                            <h1 class="info-title section-title">
-                              <div class="line">
+                            <h1 class="info-title section-title text-reveal">
+                                <span>
+                                    DET BESTE FRA 
+                                    TO VERDENER</span>
+                              <!-- <div class="line">
                                 <div class="word-wrapper">
                                     <div class="letter-wrapper">
                                         <span class="letter">
@@ -187,7 +193,7 @@
                                         </span>
                                     </div>
                                 </div>                                   
-                              </div>
+                              </div> -->
                             </h1>
                             <h2 class="info-subtitle section-subtitle">
                              <span class="text-reveal">
@@ -291,12 +297,19 @@
         </div>
 
 
-        <div class="section screen-section main-section video-animation_default" data-section="3">
+        <div class="section screen-section main-section video-animation_default" data-section>
             <figure>
                 <video muted preload autoplay playsinline loop data-l="1">
                     <source src="assets/video/2020 HOI Freia  Fase1 Pinne 15s 16x9.mp4" type="video/mp4">
                 </video>
-                <img src="assets/img/play.svg" alt="play">
+                <div class="mute-control">
+                    <div class="mute-on">
+                        <img src="assets/img/volume-on.svg" alt="volume-on">
+                    </div>
+                    <div class="mute-off">
+                        <img src="assets/img/volume-off.svg" alt="volume-off">
+                    </div>
+                </div>
                 <div class="video-borders_def">
                     <div class="video-border_def video-border-top"></div>
                     <div class="video-border_def video-border-bottom"></div>
@@ -307,7 +320,7 @@
             <div class="default-block"></div>
         </div>
 
-        <div class="section resolve-section" data-section="4">
+        <div class="section resolve-section" data-section>
             <div class="text-box">
                 <div class="lg-container">
                     <div class="hng-text section-text text-reveal">
@@ -315,7 +328,7 @@
                     </div>
                 </div>
             </div>
-            <div class="resolve-inner">
+            <div class="resolve-inner hng-resolve-inner">
                 <div class="lg-container">
                     <div class="resolve-content">
                         <h2 class="resolve-title text-reveal block-title">
@@ -334,7 +347,7 @@
             </div>
         </div>
 
-        <div class="section image_info-section" data-section="5">
+        <div class="section image_info-section" data-section>
             <div class="xl-container">
                 <div class="image_info-inner">
                     <div class="image_info-img" data-l="1">
@@ -363,12 +376,19 @@
         </div>
 
 
-        <div class="section screen-section main-section video-animation_default" data-section="6">
+        <div class="section screen-section main-section video-animation_default" data-section>
             <figure>
                 <video muted preload autoplay playsinline loop data-l="1">
                     <source src="assets/video/2020 HOI Freia  Fase2 NonStop sjekte 6s 16x9.mp4" type="video/mp4">
                 </video>
-                <img src="assets/img/play.svg" alt="play">
+                <div class="mute-control">
+                    <div class="mute-on">
+                        <img src="assets/img/volume-on.svg" alt="volume-on">
+                    </div>
+                    <div class="mute-off">
+                        <img src="assets/img/volume-off.svg" alt="volume-off">
+                    </div>
+                </div>
                 <div class="video-borders_def">
                     <div class="video-border_def video-border-top"></div>
                     <div class="video-border_def video-border-bottom"></div>
@@ -379,155 +399,165 @@
             <div class="default-block"></div>
         </div>
 
-        <div class="section trigger-section hng-trigger" data-section="7">
-            <div class="xl-container">
-                <div class="trigger-row">
-                    <div class="trigger-btn text-reveal block-title">
-                        <span>Les mer</span>
-                        <span class="trg-s">Se mindre</span>
-                        <span>
-                            <img src="assets/img/arrow.svg" alt="SBN arrow">
-                        </span>
-                    </div>
-                </div>
-                <div class="trigger-content">
-                    <div class="trigger-content_inner">
-                        <div class="trigger-content_text">
-                            <h1 class="trigger-title section-text text-reveal">
-                                <span>
-                                    Modellene med produkt og rekvisitter filmes på greenscreen og integreres med CGI Freia + Hennig-Olsen landskapet.
-                                </span>
-                            </h1>
-                            <div class="trigger-text text-reveal">
-                                <span>
-                                    I lys av Covid-19 situasjonen ble alt materiell for Freia melkesjokoladeis filmet i Oslo, med regi og produsent i Kristiansand på Teams. I 2021 ble nyheten Freia Firkløver lansert av iskremeksperten på Sørlandet. Som storebror ble også Firkløverisen filmet inne i studio med greenscreen, men
-                                    i år kunne vi heldigvis være med på opptak fysisk. I år filmet vi hos Mose by Scream og hadde med oss en lokal modell. 
-                                </span>
-                            </div>
-                        </div>
-                        <div class="row page-top_row">
-                            <div class="image-wrap" data-l="1">
-                                <picture>
-                                      <source media="(max-width: 375px)" srcset="assets/img/hennig/4M.jpg">
-                                      <source media="(max-width: 768px)" srcset="assets/img/hennig/4T.jpg">
-                                      <source media="(max-width: 1024px)" srcset="assets/img/hennig/4L.jpg">
-                                      <source srcset="assets/img/hennig/4.jpg">
-                                      <img src="assets/img/hennig/4.jpg" alt="Hennig-Olsen Freia">
-                                </picture>
-                            </div>
-                            <div class="image-wrap img-pg-b" data-l="1">
-                                <picture>
-                                      <source media="(max-width: 375px)" srcset="assets/img/hennig/5M.jpg">
-                                      <source media="(max-width: 768px)" srcset="assets/img/hennig/5T.jpg">
-                                      <source media="(max-width: 1024px)" srcset="assets/img/hennig/5L.jpg">
-                                      <source srcset="assets/img/hennig/5.jpg">
-                                      <img src="assets/img/hennig/5jpg" alt="Hennig-Olsen Freia">
-                                </picture>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="image_full-wrap" data-l="1">
-                                <picture>
-                                    <source media="(max-width: 375px)" srcset="assets/img/hennig/6M.jpg">
-                                    <source media="(max-width: 768px)" srcset="assets/img/hennig/6T.jpg">
-                                    <source media="(max-width: 1024px)" srcset="assets/img/hennig/6L.jpg">
-                                    <source srcset="assets/img/hennig/6.jpg">
-                                    <img src="assets/img/hennig/6.jpg" alt="Hennig-Olsen Freia">
-                              </picture>
-                            </div>
-                        </div>
-                        <div class="trigger-gallery--wrapper">
-                            <div class="row trigger-gallery">
-                                <div class="image g-ml" data-l="1">
-                                    <picture>
-                                        <source media="(max-width: 700px)" srcset="assets/img/hennig/7M.jpg">
-                                        <source media="(max-width: 768px)" srcset="assets/img/hennig/7T.jpg">
-                                        <source srcset="assets/img/hennig/7.jpg">
-                                        <img src="assets/img/hennig/7.jpg" alt="Hennig-Olsen Freia">
-                                  </picture>
-                                </div>
-                                <div class="image g-mla tg-mt" data-l="1">
-                                    <picture>
-                                        <source media="(max-width: 700px)" srcset="assets/img/hennig/8M.jpg">
-                                        <source media="(max-width: 768px)" srcset="assets/img/hennig/8T.jpg">
-                                        <source srcset="assets/img/hennig/8.jpg">
-                                        <img src="assets/img/hennig/8.jpg" alt="Hennig-Olsen Freia">
-                                  </picture>
-                                </div>
-                            </div>
-                            <div class="row trigger-gallery">
-                                <div class="image gt-mob-mt" data-l="1">
-                                    <picture>
-                                        <source media="(max-width: 700px)" srcset="assets/img/hennig/9M.jpg">
-                                        <source media="(max-width: 768px)" srcset="assets/img/hennig/9T.jpg">
-                                        <source srcset="assets/img/hennig/9.jpg">
-                                        <img src="assets/img/hennig/9.jpg" alt="Hennig-Olsen Freia">
-                                  </picture>
-                                </div>
-                                <div class="image tg-m-lm tg-mtm" data-l="1">
-                                    <picture>
-                                        <source media="(max-width: 700px)" srcset="assets/img/hennig/10M.jpg">
-                                        <source media="(max-width: 768px)" srcset="assets/img/hennig/10T.jpg">
-                                        <source srcset="assets/img/hennig/10.jpg">
-                                        <img src="assets/img/hennig/10.jpg" alt="Hennig-Olsen Freia">
-                                  </picture>
-                                </div>
-                            </div>
-                            <div class="row trigger-gallery">
-                                <div class="image g-ml tg-mmdefl" data-l="1">
-                                    <picture>
-                                        <source media="(max-width: 700px)" srcset="assets/img/hennig/11M.jpg">
-                                        <source media="(max-width: 768px)" srcset="assets/img/hennig/11T.jpg">
-                                        <source srcset="assets/img/hennig/11.jpg">
-                                        <img src="assets/img/hennig/11.jpg" alt="Hennig-Olsen Freia">
-                                  </picture>
-                                </div>
-                                <div class="image g-mla tg-mr tg-mmra tg-prior tg-mmt" data-l="1">
-                                    <picture>
-                                        <source media="(max-width: 700px)" srcset="assets/img/hennig/12M.jpg">
-                                        <source media="(max-width: 768px)" srcset="assets/img/hennig/12T.jpg">
-                                        <source srcset="assets/img/hennig/12.jpg">
-                                        <img src="assets/img/hennig/12.jpg" alt="Hennig-Olsen Freia">
-                                  </picture>
-                                </div>
-                                <div class="image tg-mm tg-mmt tg-mt" data-l="1">
-                                    <picture>
-                                        <source media="(max-width: 700px)" srcset="assets/img/hennig/13M.jpg">
-                                        <source media="(max-width: 768px)" srcset="assets/img/hennig/13T.jpg">
-                                        <source srcset="assets/img/hennig/13.jpg">
-                                        <img src="assets/img/hennig/13.jpg" alt="Hennig-Olsen Freia">
-                                  </picture>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="trigger-s-text text-reveal">
-                                <span>
-                                    Modellene med produkt og rekvisitter filmes på greenscreen og integreres med CGI Freia + Hennig-Olsen landskapet.
-                                </span>
-                            </div>
-                        </div>
-                        <div class="section screen-section main-section video-animation_default trigger-video_block" data-l="1">
-                            <figure>
-                                <video muted preload autoplay playsinline loop data-l="1">
-                                    <source src="assets/video/2020 HOI Freia  Fase2 NonStop sjekte 6s 16x9.mp4" type="video/mp4">
-                                </video>
-                                <img src="assets/img/play.svg" alt="play">
-                                <div class="video-borders_def">
-                                    <div class="video-border_def video-border-top"></div>
-                                    <div class="video-border_def video-border-bottom"></div>
-                                    <div class="video-border_def video-border-right"></div>
-                                    <div class="video-border_def video-border-left"></div>
-                                </div>
-                            </figure>
-                            <div class="default-block"></div>
+        <div class="section trigger-section hng-trigger" data-section>
+            <div class="trigger-section--inner">
+                <div class="xl-container">
+                    <div class="trigger-row">
+                        <div class="trigger-btn block-title">
+                            <span>Les mer</span>
+                            <span class="trg-s">Se mindre</span>
+                            <span>
+                                <img src="assets/img/arrow.svg" alt="SBN arrow">
+                            </span>
                         </div>
                     </div>
+                    <div class="trigger-content">
+                        <div class="trigger-content_inner">
+                            <div class="trigger-content_text">
+                                <h1 class="trigger-title section-text text-reveal">
+                                    <span>
+                                        Modellene med produkt og rekvisitter filmes på greenscreen og integreres med CGI Freia + Hennig-Olsen landskapet.
+                                    </span>
+                                </h1>
+                                <div class="trigger-text text-reveal">
+                                    <span>
+                                        I lys av Covid-19 situasjonen ble alt materiell for Freia melkesjokoladeis filmet i Oslo, med regi og produsent i Kristiansand på Teams. I 2021 ble nyheten Freia Firkløver lansert av iskremeksperten på Sørlandet. Som storebror ble også Firkløverisen filmet inne i studio med greenscreen, men
+                                        i år kunne vi heldigvis være med på opptak fysisk. I år filmet vi hos Mose by Scream og hadde med oss en lokal modell. 
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row page-top_row">
+                                <div class="image-wrap" data-l="1">
+                                    <picture>
+                                          <source media="(max-width: 375px)" srcset="assets/img/hennig/4M.jpg">
+                                          <source media="(max-width: 768px)" srcset="assets/img/hennig/4T.jpg">
+                                          <source media="(max-width: 1024px)" srcset="assets/img/hennig/4L.jpg">
+                                          <source srcset="assets/img/hennig/4.jpg">
+                                          <img src="assets/img/hennig/4.jpg" alt="Hennig-Olsen Freia">
+                                    </picture>
+                                </div>
+                                <div class="image-wrap img-pg-b" data-l="1">
+                                    <picture>
+                                          <source media="(max-width: 375px)" srcset="assets/img/hennig/5M.jpg">
+                                          <source media="(max-width: 768px)" srcset="assets/img/hennig/5T.jpg">
+                                          <source media="(max-width: 1024px)" srcset="assets/img/hennig/5L.jpg">
+                                          <source srcset="assets/img/hennig/5.jpg">
+                                          <img src="assets/img/hennig/5jpg" alt="Hennig-Olsen Freia">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="image_full-wrap" data-l="1">
+                                    <picture>
+                                        <source media="(max-width: 375px)" srcset="assets/img/hennig/6M.jpg">
+                                        <source media="(max-width: 768px)" srcset="assets/img/hennig/6T.jpg">
+                                        <source media="(max-width: 1024px)" srcset="assets/img/hennig/6L.jpg">
+                                        <source srcset="assets/img/hennig/6.jpg">
+                                        <img src="assets/img/hennig/6.jpg" alt="Hennig-Olsen Freia">
+                                  </picture>
+                                </div>
+                            </div>
+                            <div class="trigger-gallery--wrapper">
+                                <div class="row trigger-gallery">
+                                    <div class="image g-ml" data-l="1">
+                                        <picture>
+                                            <source media="(max-width: 700px)" srcset="assets/img/hennig/7M.jpg">
+                                            <source media="(max-width: 768px)" srcset="assets/img/hennig/7T.jpg">
+                                            <source srcset="assets/img/hennig/7.jpg">
+                                            <img src="assets/img/hennig/7.jpg" alt="Hennig-Olsen Freia">
+                                      </picture>
+                                    </div>
+                                    <div class="image g-mla tg-mt" data-l="1">
+                                        <picture>
+                                            <source media="(max-width: 700px)" srcset="assets/img/hennig/8M.jpg">
+                                            <source media="(max-width: 768px)" srcset="assets/img/hennig/8T.jpg">
+                                            <source srcset="assets/img/hennig/8.jpg">
+                                            <img src="assets/img/hennig/8.jpg" alt="Hennig-Olsen Freia">
+                                      </picture>
+                                    </div>
+                                </div>
+                                <div class="row trigger-gallery">
+                                    <div class="image gt-mob-mt" data-l="1">
+                                        <picture>
+                                            <source media="(max-width: 700px)" srcset="assets/img/hennig/9M.jpg">
+                                            <source media="(max-width: 768px)" srcset="assets/img/hennig/9T.jpg">
+                                            <source srcset="assets/img/hennig/9.jpg">
+                                            <img src="assets/img/hennig/9.jpg" alt="Hennig-Olsen Freia">
+                                      </picture>
+                                    </div>
+                                    <div class="image tg-m-lm tg-mtm" data-l="1">
+                                        <picture>
+                                            <source media="(max-width: 700px)" srcset="assets/img/hennig/10M.jpg">
+                                            <source media="(max-width: 768px)" srcset="assets/img/hennig/10T.jpg">
+                                            <source srcset="assets/img/hennig/10.jpg">
+                                            <img src="assets/img/hennig/10.jpg" alt="Hennig-Olsen Freia">
+                                      </picture>
+                                    </div>
+                                </div>
+                                <div class="row trigger-gallery">
+                                    <div class="image g-ml tg-mmdefl" data-l="1">
+                                        <picture>
+                                            <source media="(max-width: 700px)" srcset="assets/img/hennig/11M.jpg">
+                                            <source media="(max-width: 768px)" srcset="assets/img/hennig/11T.jpg">
+                                            <source srcset="assets/img/hennig/11.jpg">
+                                            <img src="assets/img/hennig/11.jpg" alt="Hennig-Olsen Freia">
+                                      </picture>
+                                    </div>
+                                    <div class="image g-mla tg-mr tg-mmra tg-prior tg-mmt" data-l="1">
+                                        <picture>
+                                            <source media="(max-width: 700px)" srcset="assets/img/hennig/12M.jpg">
+                                            <source media="(max-width: 768px)" srcset="assets/img/hennig/12T.jpg">
+                                            <source srcset="assets/img/hennig/12.jpg">
+                                            <img src="assets/img/hennig/12.jpg" alt="Hennig-Olsen Freia">
+                                      </picture>
+                                    </div>
+                                    <div class="image tg-mm tg-mmt tg-mt" data-l="1">
+                                        <picture>
+                                            <source media="(max-width: 700px)" srcset="assets/img/hennig/13M.jpg">
+                                            <source media="(max-width: 768px)" srcset="assets/img/hennig/13T.jpg">
+                                            <source srcset="assets/img/hennig/13.jpg">
+                                            <img src="assets/img/hennig/13.jpg" alt="Hennig-Olsen Freia">
+                                      </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="trigger-s-text text-reveal">
+                                    <span>
+                                        Modellene med produkt og rekvisitter filmes på greenscreen og integreres med CGI Freia + Hennig-Olsen landskapet.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="section screen-section main-section video-animation_default trigger-video_block" data-l="1">
+                                <figure>
+                                    <video muted preload autoplay playsinline loop data-l="1">
+                                        <source src="assets/video/2020 HOI Freia  Fase2 NonStop sjekte 6s 16x9.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="mute-control">
+                                        <div class="mute-on">
+                                            <img src="assets/img/volume-on.svg" alt="volume-on">
+                                        </div>
+                                        <div class="mute-off">
+                                            <img src="assets/img/volume-off.svg" alt="volume-off">
+                                        </div>
+                                    </div>
+                                    <div class="video-borders_def">
+                                        <div class="video-border_def video-border-top"></div>
+                                        <div class="video-border_def video-border-bottom"></div>
+                                        <div class="video-border_def video-border-right"></div>
+                                        <div class="video-border_def video-border-left"></div>
+                                    </div>
+                                </figure>
+                                <div class="default-block"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
 
-        <div class="section section-slider" data-section="8" data-l="1">
+        <div class="section section-slider" data-section data-l="1">
             <div class="xl-container">
                 <div class="hng-slider-inner">
                     <div class="slider-scroll">
@@ -563,7 +593,7 @@
             </div>
         </div>
 
-        <div class="section section-simple" data-section="9">
+        <div class="section section-simple" data-section>
             <div class="xl-container">
                 <div class="page-content__inner">
                     <div class="page-content__text">
@@ -585,12 +615,19 @@
             </div>
         </div>
 
-        <div class="section screen-section main-section video-animation_default" data-section="10">
+        <div class="section screen-section main-section video-animation_default s-pb" data-section>
             <figure>
                 <video muted preload autoplay playsinline loop data-l="1">
                     <source src="assets/video/2020 HOI Freia  Fase2 Boks tabletop 6s 16x9.mp4" type="video/mp4">
                 </video>
-                <img src="assets/img/play.svg" alt="play">
+                <div class="mute-control">
+                    <div class="mute-on">
+                        <img src="assets/img/volume-on.svg" alt="volume-on">
+                    </div>
+                    <div class="mute-off">
+                        <img src="assets/img/volume-off.svg" alt="volume-off">
+                    </div>
+                </div>
                 <div class="video-borders_def">
                     <div class="video-border_def video-border-top"></div>
                     <div class="video-border_def video-border-bottom"></div>
@@ -602,12 +639,19 @@
         </div>
 
         
-        <div class="section screen-section main-section video-animation_default" data-section="11">
+        <div class="section screen-section main-section video-animation_default" data-section>
             <figure>
                 <video muted preload autoplay playsinline loop data-l="1">
                     <source src="assets/video/2020 HOI Freia  Fase2 Dessert jente berg 15s 16x9.mp4" type="video/mp4">
                 </video>
-                <img src="assets/img/play.svg" alt="play">
+                <div class="mute-control">
+                    <div class="mute-on">
+                        <img src="assets/img/volume-on.svg" alt="volume-on">
+                    </div>
+                    <div class="mute-off">
+                        <img src="assets/img/volume-off.svg" alt="volume-off">
+                    </div>
+                </div>
                 <div class="video-borders_def">
                     <div class="video-border_def video-border-top"></div>
                     <div class="video-border_def video-border-bottom"></div>
@@ -639,7 +683,7 @@
 
 
 
-    <footer class="footer" data-section="12">
+    <footer class="footer" data-section>
         <div class="lg-container">
             <div class="footer-inner">
                 <div class="footer-contacts--text">
@@ -697,9 +741,6 @@
 
 
 
-    <a href="#" class="scroll-btn _color">
-        <span>Arbeid</span>
-    </a>
 </div>
 
 

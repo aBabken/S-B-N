@@ -1,0 +1,22 @@
+// 
+
+.oy-resolve-inner,
+.oy-trigger > div {
+    background: $sage;
+}
+.half_picture-section {
+    padding: 120px 0 150px;
+    @include lg {
+        padding: 75px 0;
+    }
+    @include md {
+        padding: 60px 0;
+    }
+    @include sm {
+        padding: 95px 0;
+    }
+    .row {
+        padding: 0;
+        flex-direction: row;
+    }
+}

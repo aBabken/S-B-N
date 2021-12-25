@@ -1,0 +1,29 @@
+// 
+
+.project-list--inner {
+    padding: 100px 0;
+    .project-line {
+        width: 0%;
+        height: 1px;
+        background: $black;
+    }
+    @include md {
+        padding: 60px 0;
+    }
+}
+.project-item {
+    padding-left: 34px;
+    @include rhythm(40,48);
+    @include ffamily($text-roman);
+    @include lg {
+        @include rhythm(30,48);
+        padding-left: 24px;
+    }
+    @include md {
+        padding-left: 14px;
+    }
+    @include sm {
+        @include rhythm(18,25);
+        padding-left: 9px;
+    }
+}

@@ -36,7 +36,7 @@
         <main class="main">
 
 
-            <div class="section screen-section main-section video-animation" data-section="1">
+            <div class="section screen-section main-section video-animation" data-section>
                 <figure>
                     <div class="text-block">
                         <h1 class="main__screen--title">
@@ -46,10 +46,20 @@
                     <video muted preload autoplay playsinline loop data-l="1">
                         <source src="assets/video/Crème - tilfredsstill lysten!.mp4" type="video/mp4">
                     </video>
-                    <img src="assets/img/play.svg" alt="play">
+                    <div class="mute-control">
+                        <div class="mute-on">
+                            <img src="assets/img/volume-on.svg" alt="volume-on">
+                        </div>
+                        <div class="mute-off">
+                            <img src="assets/img/volume-off.svg" alt="volume-off">
+                        </div>
+                    </div>
+                    <div class="control-btn">
+                        <img src="assets/img/play.svg" alt="play">
+                    </div>
                     <div class="video-borders">
                         <div class="video-border video-border-top"></div>
-                        <div class="video-border video-border-bottom"></div>
+                        <!-- <div class="video-border video-border-bottom"></div> -->
                         <div class="video-border video-border-right"></div>
                         <div class="video-border video-border-left"></div>
                     </div>
@@ -58,20 +68,34 @@
             </div>
 
 
-            <div class="section screen-section video-section main-video" data-section="2" data-l="1">
-                <figure>
-                    <video muted preload autoplay playsinline loop>
-                        <source src="assets/video/2020 HOI Freia  Fase1 Pinne 15s 16x9.mp4" type="video/mp4">
-                    </video>
-                    <img src="assets/img/play.svg" alt="play">
-                </figure>       
+            <div class="section screen-section picture__screen" data-section data-l="1">
+                <picture>
+                    <source media="(max-width: 375px)" srcset="assets/img/hennig/bgM.jpg">
+                    <source media="(max-width: 768px)" srcset="assets/img/hennig/bgT.jpg">
+                    <source media="(max-width: 1024px)" srcset="assets/img/hennig/bgL.jpg">
+                    <source srcset="assets/img/hennig/bg.jpg" type="image/jpeg">
+                    <img src="assets/img/hennig/bg.jpg" alt="Sparebanken Sør">
+                </picture>          
+                <a href="#" class="scroll-btn">
+                    <div class="btn-inner">
+                        <span>Arbeid</span>
+                        <div id="firstLottie"></div>
+                    </div>
+                </a>
             </div>
+    
 
-            <div class="section about-section" data-section="3">
+            <div class="section about-section" data-section>
                 <div class="about-content--wrapper">
                     <div class="lg-container">
                         <div class="about-content">
-                            <div class="line" data-duration="0.2">
+                            <div class="text-reveal">
+                                <span>
+                                    En stor slump faglig lidenskap, litersvis med sort kaffe, 
+                                    en munnfull tørr humor og hyller med slitte vinylplater, er medisinen S & B-N tar daglig for å bidra til at Sørlandets sterkeste merkevarer alltid er aktuelle og synlige.
+                                </span>
+                            </div>
+                            <!-- <div class="line" data-duration="0.2">
                                 <div class="word-wrapper">
                                     <div class="letter-wrapper">
                                         <span class="letter">
@@ -1294,7 +1318,7 @@
                                         </span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -1488,7 +1512,7 @@
             </div>
 
 
-            <div class="section slider-section main-slider" data-section="4">
+            <div class="section slider-section main-slider" data-section>
                 <div class="lg-container">
                     <div class="slider-inner">
                         <div class="slider-block">
@@ -1583,7 +1607,7 @@
             </div>
 
 
-            <div class="section whoweare-section" data-section="5">
+            <div class="section whoweare-section" data-section>
                 <div class="section-trigger--wrapper">
                     <div class="whoweare-inner">
                         <div class="whoweare-image">
@@ -1706,7 +1730,7 @@
                 </div>
             </div>
 
-            <div class="section img-section" data-section="6">
+            <div class="section img-section" data-section>
                 <div class="img-section--inner">
                     <div class="section-img" data-l="1" data-reveal_b>
                         <picture>
@@ -1719,7 +1743,7 @@
                 </div>
             </div>
 
-            <div class="section stack-section" data-section="7">
+            <div class="section stack-section" data-section>
                 <div class="container">
                     <div class="image-stack">
                         <div class="stack-inner">
@@ -1766,7 +1790,7 @@
 
 
 
-        <footer class="footer" data-section="8">
+        <footer class="footer" data-section>
             <div class="lg-container">
                 <div class="footer-inner">
                     <div class="footer-contacts--text">
@@ -1824,17 +1848,8 @@
 
 
 
-        <a href="#" class="scroll-btn _color">
-            <div class="btn-inner">
-                <span>Arbeid</span>
-                <div id="firstLottie"></div>
-    
-                <!-- <script
-                src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player id="firstLottie" src="assets/img/arrow.json" background="transparent" speed="1"></lottie-player> -->
-            </div>
-        </a>
 
-        <!-- <div class="transition-fade"></div> -->
+
     </div>
 
 
@@ -1854,33 +1869,5 @@
 <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
 <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 <script src="assets/js/script.js"></script>
-<script>
-    var container = document.getElementById('firstLottie');
-          animData = bodymovin.loadAnimation({
-              container: container,
-              renderer: 'svg',
-              autoplay: false,
-              loop: true,
-              path : 'assets/img/arrow.json'
-          });
-    
-    var animationStart = 0;
-    $(window).scroll(function(){
-        if (animationStart < 200) {
-            animData.playSegments([animationStart,animationStart+1], true);
-            animationStart++;
-        } else {
-            animationStart = 0;
-        }
-        var svg = $(animData.wrapper.getElementsByTagName("svg")[0]).find('path');
-        svg.css('transition', '.3s ease')
-        if ($('.scroll-btn').hasClass('white')) {
-            svg.css('stroke', '#fff')
-        } else {
-            svg.css('stroke', '#000')
-        }
-    })
-    
-    </script>
 </body>
 </html>

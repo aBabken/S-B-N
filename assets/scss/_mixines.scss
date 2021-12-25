@@ -1,5 +1,9 @@
 // breakpoints
-
+@mixin xxl {
+    @media only screen and (max-width: 1600px) {
+        @content;
+    }
+}
 
 @mixin xl {
     @media only screen and (max-width: 1440px) {

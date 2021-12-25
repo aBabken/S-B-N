@@ -1,0 +1,49 @@
+// 
+
+.sm_image-section-inner {
+    background: $brown;
+}
+.sm_image-inner {
+    padding: 175px 0 0;
+}
+.sm-image-text {
+    color: $white;
+    height: 175px;
+    display: flex;
+    align-items: flex-end;
+    p {
+        padding-bottom: 20px;
+        max-width: 700px;
+        @include rhythm(20,25);
+        @include md {
+            @include rhythm(12, 18);
+            padding-bottom: 10px;
+            max-width: 350px;
+        }
+    }
+}
+@include lg {
+    .sm_image-inner {
+        padding: 100px 0 0;
+    }
+    .sm-image-text {
+        height: 100px;
+    }
+}
+
+.sm-image {
+    width: 38%;
+    margin: 0 auto;
+    img {
+        width: 100%;
+    }
+    @include lg {
+        width: 50%;
+    }
+    @include md {
+        width: 70%;
+    }
+    @include sm {
+        width: 85%;
+    }
+}

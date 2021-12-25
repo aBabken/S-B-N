@@ -1,0 +1,42 @@
+// 
+
+.viper-resolve-inner,
+.viper-trigger > div {
+    background: $violet;
+}
+.img_text-section {
+    .img-section--inner {
+        display: flex;
+        justify-content: space-between;
+        @include md {
+            flex-direction: column;
+            max-width: fit-content;
+            width: 57.3%;
+            .section-img {
+                width: 100%;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        @include sm {
+            width: 100%;
+        }
+    } 
+    .section-sm-text {
+        margin-left: 9.3%;
+        @include rhythm(38,48);
+        @include xl {
+            @include rhythm(16,21);
+            margin-left: 3.3%;
+        }
+        @include lg {
+            margin-left: 5.3%;
+        }
+        @include md {
+            width: 100%;
+            margin-top: 35px;
+            margin-left: 0;
+        }
+    }
+}

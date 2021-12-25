@@ -1,0 +1,17 @@
+// 
+.boen-title {
+    max-width: 1080px;
+}
+.s-def-slider {    
+    .slider-scroll {
+        display: block;
+    }
+}
+.def-slider {
+    cursor: grab;
+    img {
+        width: 100%;
+        height: calc(100vh - 50px);
+        object-fit: cover;
+    }
+}
