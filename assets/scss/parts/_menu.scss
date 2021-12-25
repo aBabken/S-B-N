@@ -1,0 +1,77 @@
+// 
+
+.menu-block {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: $white;
+    z-index: 100;
+    transition: width .5s ease-out;
+    &.active {
+        width: 100%;
+        .menu-tab-inner {
+            transform: translateX(0);
+        }
+    }
+}
+.menu-inner {
+    display: flex;
+    height: 100%;
+}
+.menu-tabs {
+    flex: 0 0 33.333333%;
+    display: flex;
+    text-transform: uppercase;
+}
+.menu-content {
+    flex: 0 0 66.666666%;
+    background: $sage; 
+    padding: 39px 20px 18px 16px; 
+}
+.menu-tab {
+    .menu-tab-inner {
+        width: 100%;
+        height: 100%;
+        transform: translateX(20px);
+        transform-origin: bottom;
+        transition: transform .4s ease-out;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+    }
+    padding: 39px 15px 18px 0;
+    transition: all .3s ease-out;
+    span {
+        display: flex;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+    }
+    flex: 0 0 25%;
+    &:nth-child(1) {
+        background: $gray;
+    }
+    &:nth-child(2) {
+        background: $p-blue;        
+    }
+    &:nth-child(3) {
+        background: $brown;    
+        color: $white;    
+    }
+    &:nth-child(4) {
+        background: $sage;        
+    }
+}
+.menu-title {
+    @include rhythm(100,100);
+}
+.menu-info {
+    @include rhythm(20,24);
+}
+.menu-close {
+    cursor: pointer;
+    margin-left: auto;
+    width: fit-content;
+}

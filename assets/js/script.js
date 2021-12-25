@@ -4,6 +4,12 @@ $(document).ready(function () {
   function refreshPage() {
 
 
+    $('.menu, .menu-close').click(function() {
+      $('.menu-block').toggleClass('active');
+    })
+
+
+
     let text = $(".video-animation").find(".text-block")
 
     var defaultOptions = {
