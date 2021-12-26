@@ -4,11 +4,34 @@ $(document).ready(function () {
   function refreshPage() {
 
 
-    $('.menu, .menu-close').click(function() {
-      $('.menu-block').toggleClass('active');
+    $('.menu,.menu-close').click(function() {
+
+      if (tl.reversed()) {
+        tl.play();
+      } else {
+        tl.reverse();
+      }
+      $('html').toggleClass('fixed');
     })
 
+    // $('.menu-close').click(function() {
 
+    //   tl.reverse(0);
+    //   $('html').removeClass('fixed');
+    // })
+
+
+    const tl = gsap.timeline({ paused: true, reversed: true });
+  //   tl.call(function() { 
+  //     $('.menu-block').toggleClass("active");
+  // }, null, null, 0.5);
+    tl.fromTo('.menu-block',
+    {width: 0},
+    {
+      width: "100%",
+      duration: .3,
+      ease: Power4.easeOut
+    });
 
     let text = $(".video-animation").find(".text-block")
 

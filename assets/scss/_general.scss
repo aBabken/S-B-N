@@ -220,8 +220,15 @@ input[type=number] {
 
 
 // 
+html {
+    &.fixed {
+        overflow: hidden;
+        padding-right: 17px;
+    }
+}
 
 body {
+    // width: 100%;
     @include ffamily($display-roman, normal);
     @include rhythm(25, 35);
     background: $white;

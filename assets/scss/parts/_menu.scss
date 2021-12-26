@@ -6,44 +6,83 @@
     bottom: 0;
     right: 0;
     width: 0%;
-    height: 100%;
+    
+    height: 100vh;
     background: $white;
     z-index: 100;
     transition: width .5s ease-out;
     &.active {
         width: 100%;
+        display: block;
         .menu-tab-inner {
             transform: translateX(0);
+        }
+        .menu-inner {
+            display: flex;
         }
     }
 }
 .menu-inner {
-    display: flex;
+    max-width: 100%;
     height: 100%;
+    display: flex;
 }
 .menu-tabs {
     flex: 0 0 33.333333%;
     display: flex;
     text-transform: uppercase;
+    @include md {
+        flex: 0 0 52.08%;
+    }
+    @include sm {
+        flex: 0 0 74.6666666%;
+    }
 }
 .menu-content {
     flex: 0 0 66.666666%;
     background: $sage; 
-    padding: 39px 20px 18px 16px; 
+    padding: 22px 20px 18px 16px; 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @include md {
+        flex: 0 0 47.92%;
+        padding-top: 17px;
+    }
+    @include sm {
+        flex: 0 0 25.3333333%;
+        padding-top: 13px;
+    }
+    @media (max-height: 500px) {
+        padding-top: 7px;
+    }
 }
 .menu-tab {
+    display: block;
     .menu-tab-inner {
         width: 100%;
         height: 100%;
-        transform: translateX(20px);
+        // transform: translateX(20px);
         transform-origin: bottom;
         transition: transform .4s ease-out;
         display: flex;
         justify-content: space-between;
         flex-direction: column-reverse;
     }
-    padding: 39px 15px 18px 0;
+    padding: 39px 2% 18px 0;
     transition: all .3s ease-out;
+    @include xl {
+        padding-right: 1%;
+    }
+    @include md {
+        padding-top: 30px;
+    }
+    @include sm {
+        padding-top: 23px;
+    }
+    @media (max-height: 500px) {
+        padding-top: 13px;
+    }
     span {
         display: flex;
         writing-mode: vertical-lr;
@@ -66,12 +105,93 @@
 }
 .menu-title {
     @include rhythm(100,100);
+    @include xl {
+        @include rhythm(60,60);
+    }
+    @include md {
+        @include rhythm(70,70);
+    }
+    @include sm {
+        @include rhythm(50,50);
+    }
+    @media (max-height: 500px) {
+        @include rhythm(30,30);
+    }
 }
 .menu-info {
     @include rhythm(20,24);
+    @include sm {
+        @include rhythm(14,18);
+    }
+    @media (max-height: 500px) {
+        @include rhythm(12,16);
+    }
 }
 .menu-close {
     cursor: pointer;
     margin-left: auto;
     width: fit-content;
+    height: fit-content;
+    @include rhythm(25,38);
+    @include xl {
+        @include rhythm(18,28);
+    }
+    @include sm {
+        @include rhythm(16,28);
+    }
+    @media (max-height: 500px) {
+        @include rhythm(12,16);
+    }
+}
+.menu-text {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+    @include rhythm(25,30);
+    @include xl {
+        @include rhythm(16,21);
+    }
+    @include md {
+        flex-direction: column;
+        @include rhythm(20,21);
+    }
+    @include sm {
+        position: absolute;
+        top: 110px;
+        left: -50px;
+        @include rhythm(12,13);
+    }
+    @media (max-height: 500px) {
+        top: 50px;
+    }
+}
+.menu-col {
+    display: flex;
+    margin-top: auto;
+    flex-direction: column;
+    margin-right: 10%;
+    @include lg {
+        margin-right: 20px;
+        &:last-child {
+            margin-right: 50px;
+        }
+    }
+    @include md {
+        margin-bottom: 20px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: 0;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    @include sm {
+        margin-bottom: 12px;
+        width: unset;
+        margin-left: 0;
+    }
+    a, span {
+        display: block;
+        white-space: nowrap;
+    }
 }
