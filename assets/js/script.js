@@ -22,17 +22,9 @@ $(document).ready(function () {
       }
     })
 
-    // $('.menu-close').click(function() {
-
-    //   tl.reverse(0);
-    //   $('html').removeClass('fixed');
-    // })
 
 
     const tl = gsap.timeline({ paused: true, reversed: true });
-  //   tl.call(function() { 
-  //     $('.menu-block').toggleClass("active");
-  // }, null, null, 0.5);
     tl.fromTo('.menu-block',
     {width: 0},
     {
@@ -52,14 +44,8 @@ $(document).ready(function () {
       easing: "ease",
     };
 
-    // let panel = new PanelSnap(defaultOptions);
-    $(".scroll-btn").click(function (e) {
-      e.preventDefault();
-      let next = $(panel.activePanel).data("section") + 1;
-      let pane = panel.panelList.find((el) => $(el).data("section") == next);
-      let p = pane;
-      panel.snapToPanel(p);
-    });
+   
+
 
 
     window.onscroll = function () {
@@ -297,7 +283,7 @@ $(document).ready(function () {
             $element.removeClass("grow");
             if (controlVideo) {
               $element.find("video").get(0).pause();
-              controlButton.fadeOut();
+              // controlButton.fadeOut();
             }
             caseTriggered = false;
           }
@@ -827,15 +813,15 @@ $(document).ready(function () {
       })
     }
 
-
+    let panel = new PanelSnap(defaultOptions);
   }
   
   refreshPage();
-  // const swup = new Swup();
-  // swup.on("contentReplaced", function () {
-  //   setTimeout(function(){
-  //     window.scrollTo(0, 0);
-  //   }, 200)
-  //   refreshPage();
-  // });
+  const swup = new Swup();
+  swup.on("contentReplaced", function () {
+    setTimeout(function(){
+      window.scrollTo(0, 0);
+    }, 200)
+    refreshPage();
+  });
 });
